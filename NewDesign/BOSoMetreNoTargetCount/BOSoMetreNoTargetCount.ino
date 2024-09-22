@@ -238,7 +238,7 @@ void checkShutdown() {
     if (!isShutdown) {
       Serial.println("Shutdown switch pressed. Stopping SD card operations.");
       lcd.clear();
-      lcd.print("Shutting down...");
+      lcd.print("On standby...");
 
       // Close the file if it's open
       if (sensorDataFile) {
