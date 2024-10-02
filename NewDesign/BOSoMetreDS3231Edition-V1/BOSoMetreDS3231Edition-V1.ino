@@ -2,8 +2,7 @@
 #include <SD.h>
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
-#include <TimeLib.h>
-#include <DS1307RTC.h>  // a basic DS1307 library that returns time as a time_t
+#include <RTClib.h>
 
 // Define pins connected to the TCS3200 sensor
 #define S0 5
@@ -28,44 +27,30 @@ const int chipSelect = 12;
 
 // Variables for interacting with the SD card
 File sensorDataFile;
-String dataString = ""; 
+char dataString[150];  // Increased size to accommodate longer strings
 
 // Initialize the LCD
 LiquidCrystal_I2C lcd(0x27, 20, 4);  // Change the address if needed
 
 // Initialize the RTC
-//RTC_DS3231 rtc;
-//Don't forget to change the RTC type if you used the other module
-//RTC_DS1307 rtc;
+RTC_DS3231 rtc;
 
 // Variable to track shutdown state
 bool isShutdown = false;
 
 // Variable to store patient ID
-String patientID = "";
-
-// Time setting variables
-const char *monthName[12] = {
-  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-};
-
-// Declare tmElements_t for storing time
-tmElements_t tm; 
+char patientID[20];  // Adjust size as needed
 
 // Function Prototypes
 void setupSensorPins();
 void readColor(int &colorCount, int S2State, int S3State);
 void checkShutdown();
 void blinkLED(int delayTime);
-String getTimestamp();
-void displayDataOnLCD(const String &data);
-bool getTime(const char *str);
-bool getDate(const char *str);
+void getTimestamp(char* buffer, size_t bufferSize);
+void displayDataOnLCD(int redCount, int greenCount, int blueCount, int clearCount, int turbidityPercent);
+void readPatientID();
 
 void setup() {
-  bool parse = false;
-  bool config = false;
   // Initialize serial communication
   Serial.begin(9600);
   // Give time for the serial monitor to open
@@ -107,44 +92,19 @@ void setup() {
   lcd.clear();
   lcd.print("Initializing...");
 
-  // Initialize RTC with compiler's date and time
-  if (getDate(__DATE__) && getTime(__TIME__)) {
-    parse = true;
-    // and configure the RTC with this info
-    if (RTC.write(tm)) {
-      config = true;
-    }
+  // Initialize RTC
+  if (!rtc.begin()) {
+    Serial.println("Couldn't find RTC");
+    while (1); // Halt if RTC not found
   }
-  
- if (parse && config) {
-    Serial.print("DS1307 configured Time=");
-    Serial.print(__TIME__);
-    Serial.print(", Date=");
-    Serial.println(__DATE__);
-  } else if (parse) {
-    Serial.println("DS1307 Communication Error :-{");
-    Serial.println("Please check your circuitry");
-  } else {
-    Serial.print("Could not parse info from the compiler, Time=\"");
-    Serial.print(__TIME__);
-    Serial.print("\", Date=\"");
-    Serial.print(__DATE__);
-    Serial.println("\"");
+
+  if (rtc.lostPower()) {
+    Serial.println("RTC lost power, setting the time!");
+    rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
   }
 
   // Prompt for patient ID
-  Serial.println("Please enter patient ID and press ENTER:");
-  while (Serial.available() == 0) {
-    // Wait for input
-  }
-  patientID = Serial.readStringUntil('\n');
-  patientID.trim();
-  Serial.print("Patient ID set to: ");
-  Serial.println(patientID);
-  lcd.clear();
-  lcd.print("Patient ID: ");
-  lcd.setCursor(0, 1);
-  lcd.print(patientID);
+  readPatientID();
 }
 
 void loop() {
@@ -158,9 +118,6 @@ void loop() {
     delay(1000);
     digitalWrite(greenLEDPin, LOW);
     delay(1000);
-
-    // Debug statement to indicate start of loop
-    Serial.println("Starting loop...");
 
     // Variables to store counts for each color and clear reading
     int redPeriodCount = 0;
@@ -181,17 +138,18 @@ void loop() {
     int blueChangePercent = (bluePeriodCount - baselineBluePeriodCount) * 100 / baselineBluePeriodCount;
 
     // Get the current timestamp
-    String timestamp = getTimestamp();
+    char timestamp[20];
+    getTimestamp(timestamp, sizeof(timestamp));
 
     // Build the data string with timestamp and patient ID
-    dataString  = patientID + "," + timestamp + "," + String(redPeriodCount) + "," + String(greenPeriodCount) + "," + 
-                  String(bluePeriodCount) + "," + String(clearPeriodCount) + "," + 
-                  String(redChangePercent) + "%," + String(greenChangePercent) + "%," +
-                  String(blueChangePercent) + "%," + String(turbidityPercent) + "%"; 
+    snprintf(dataString, sizeof(dataString), "%s,%s,%d,%d,%d,%d,%d%%,%d%%,%d%%,%d%%",
+             patientID, timestamp,
+             redPeriodCount, greenPeriodCount, bluePeriodCount, clearPeriodCount,
+             redChangePercent, greenChangePercent, blueChangePercent, turbidityPercent);
 
     // Debug statement to print the data string
-    Serial.println("Data String: " + dataString);
-
+    Serial.print("Data String: ");
+    Serial.println(dataString);
 
     // Reinitialize SD card if necessary
     if (!SD.begin(chipSelect)) {
@@ -199,29 +157,42 @@ void loop() {
       lcd.setCursor(0, 3);
       lcd.print("TXT-ERR: SD INIT");
       while (1) {
-      blinkLED(200); // Fast blink
-    }
+        blinkLED(200); // Fast blink
+      }
       delay(2000);  // Give some time to see the error
       return;  // Exit the loop if SD initialization failed
     }
 
     // Log data to SD card
+    bool sdWriteSuccess = false; // Flag to track SD card write status
     sensorDataFile = SD.open("SENSOR.TXT", FILE_WRITE);
     if (sensorDataFile) {
       sensorDataFile.println(dataString);
       sensorDataFile.close();
       Serial.println("Text file write complete");
-      // Append "TXT-OK" to the data string for display on the LCD
-      dataString += " TXT-OK";
+      sdWriteSuccess = true;
     } else {
       // if the file didn't open, print an error:
       Serial.println("Error opening text file.");
-      // Append "TXT-ERR" to the data string for display on the LCD
-      dataString += " TXT-ERR";
+      sdWriteSuccess = false;
     }
 
     // Display data on the LCD
-    displayDataOnLCD(dataString);
+    displayDataOnLCD(redPeriodCount, greenPeriodCount, bluePeriodCount, clearPeriodCount, turbidityPercent);
+
+    // Display TXT-OK or TXT-ERR on the LCD
+    lcd.clear();
+    if (sdWriteSuccess) {
+      lcd.setCursor(0, 0);
+      lcd.print("TXT-OK");
+    } else {
+      lcd.setCursor(0, 0);
+      lcd.print("TXT-ERR");
+    }
+    delay(1000); // Display the message for 1 second
+
+    // Return to displaying data
+    displayDataOnLCD(redPeriodCount, greenPeriodCount, bluePeriodCount, clearPeriodCount, turbidityPercent);
 
     // Short delay before the next loop iteration
     delay(1000);
@@ -258,14 +229,6 @@ void readColor(int &colorCount, int S2State, int S3State) {
     }
     currentTime = millis();
   }
-
-  // Debug statement to print color count
-  //Serial.print("Color count (S2: ");
-  //Serial.print(S2State);
-  //Serial.print(", S3: ");
-  //Serial.println(S3State);
-  //Serial.print("): ");
-  //Serial.println(colorCount);
 }
 
 void checkShutdown() {
@@ -308,55 +271,56 @@ void blinkLED(int delayTime) {
   delay(delayTime);
 }
 
-String getTimestamp() {
-  time_t now = RTC.get();
-  char buf[20];
-  sprintf(buf, "%04d/%02d/%02d %02d:%02d:%02d", 
-          year(now), month(now), day(now), 
-          hour(now), minute(now), second(now));
-  return String(buf);
+void getTimestamp(char* buffer, size_t bufferSize) {
+  DateTime now = rtc.now();
+  snprintf(buffer, bufferSize, "%04d/%02d/%02d %02d:%02d:%02d",
+           now.year(), now.month(), now.day(),
+           now.hour(), now.minute(), now.second());
 }
 
-void displayDataOnLCD(const String &data) {
+void displayDataOnLCD(int redCount, int greenCount, int blueCount, int clearCount, int turbidityPercent) {
   lcd.clear();
   lcd.setCursor(0, 0);
-  lcd.print(data.substring(0, 20));
-  if (data.length() > 20) {
-    lcd.setCursor(0, 1);
-    lcd.print(data.substring(20, 40));
-  }
-  if (data.length() > 40) {
-    lcd.setCursor(0, 2);
-    lcd.print(data.substring(40, 60));
-  }
-  if (data.length() > 60) {
-    lcd.setCursor(0, 3);
-    lcd.print(data.substring(60, 80));
-  }
+  lcd.print("ID:");
+  lcd.print(patientID);
+
+  lcd.setCursor(0, 1);
+  lcd.print("Turb:");
+  lcd.print(turbidityPercent);
+  lcd.print("%");
+
+  lcd.setCursor(10, 1);
+  lcd.print("Clr:");
+  lcd.print(clearCount);
+
+  lcd.setCursor(0, 2);
+  lcd.print("R:");
+  lcd.print(redCount);
+  lcd.print(" G:");
+  lcd.print(greenCount);
+
+  lcd.setCursor(0, 3);
+  lcd.print("B:");
+  lcd.print(blueCount);
+  lcd.print(" T:");
+  char timeBuffer[6];
+  DateTime now = rtc.now();
+  snprintf(timeBuffer, sizeof(timeBuffer), "%02d:%02d", now.hour(), now.minute());
+  lcd.print(timeBuffer);
 }
 
-bool getTime(const char *str) {
-  int Hour, Min, Sec;
-
-  if (sscanf(str, "%d:%d:%d", &Hour, &Min, &Sec) != 3) return false;
-  tm.Hour = Hour;
-  tm.Minute = Min;
-  tm.Second = Sec;
-  return true;
-}
-
-bool getDate(const char *str) {
-  char Month[12];
-  int Day, Year;
-  uint8_t monthIndex;
-
-  if (sscanf(str, "%s %d %d", Month, &Day, &Year) != 3) return false;
-  for (monthIndex = 0; monthIndex < 12; monthIndex++) {
-    if (strcmp(Month, monthName[monthIndex]) == 0) break;
+void readPatientID() {
+  Serial.println("Please enter patient ID and press ENTER:");
+  while (Serial.available() == 0) {
+    // Wait for input
   }
-  if (monthIndex >= 12) return false;
-  tm.Day = Day;
-  tm.Month = monthIndex + 1;
-  tm.Year = CalendarYrToTm(Year);
-  return true;
+  String tempID = Serial.readStringUntil('\n');
+  tempID.trim();
+  tempID.toCharArray(patientID, sizeof(patientID));
+  Serial.print("Patient ID set to: ");
+  Serial.println(patientID);
+  lcd.clear();
+  lcd.print("Patient ID: ");
+  lcd.setCursor(0, 1);
+  lcd.print(patientID);
 }
