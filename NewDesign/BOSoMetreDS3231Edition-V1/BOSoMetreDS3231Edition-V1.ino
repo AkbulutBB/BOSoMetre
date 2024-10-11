@@ -19,6 +19,11 @@ int baselineRedPeriodCount = 68;
 int baselineGreenPeriodCount = 76; 
 int baselineBluePeriodCount = 90;  
 
+// Global variable to track the last retry time for SD initialization
+unsigned long lastRetryTime = 0;
+const unsigned long retryInterval = 60000; // 1 minute interval for retry
+
+
 // Timeout setting for the pulseIn() function (microseconds)
 const int pulseTimeout = 2000; 
 
@@ -153,11 +158,12 @@ void loop() {
 
     // Reinitialize SD card if necessary
     if (!SD.begin(chipSelect)) {
-      Serial.println("SD card reinitialization failed!");
-      lcd.setCursor(0, 3);
-      lcd.print("TXT-ERR: SD INIT");
-      while (1) {
-        blinkLED(200); // Fast blink
+      unsigned long currentMillis = millis();
+      if (currentMillis - lastRetryTime >= retryInterval) {
+        Serial.println("SD card reinitialization failed! Retrying in 1 minute...");
+        lcd.setCursor(0, 3);
+        lcd.print("TXT-ERR: SD INIT");
+        lastRetryTime = currentMillis;  // Update the last retry time
       }
       delay(2000);  // Give some time to see the error
       return;  // Exit the loop if SD initialization failed
