@@ -231,7 +231,11 @@ void loop() {
     lcd.clear();
     lcd.setCursor(0, 0);
     lcd.print("ID: ");
-    lcd.print(patientID.substring(0, 10));  // Display up to 10 characters of the ID
+    char tempID[11];  // Temporary buffer to hold the first 10 characters + null terminator
+    strncpy(tempID, patientID, 10);  // Copy the first 10 characters
+    tempID[10] = '\0';  // Ensure null-terminated string
+    lcd.print(tempID);  // Print the trimmed ID
+
     
     lcd.setCursor(0, 1);
     lcd.print("Clr:");
