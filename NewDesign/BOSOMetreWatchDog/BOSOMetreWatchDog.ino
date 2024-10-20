@@ -58,6 +58,12 @@ void displayDataOnLCD(int redCount, int greenCount, int blueCount, int clearCoun
 void readPatientID();
 void updatePatientID();
 
+// Define the analog pin for voltage reading
+const int analogPin = A0;  // Pin connected to the resistor and white LED junction
+float voltage;
+float current;
+float resistorValue = 68000.0;  // 68k ohms
+
 void setup() {
   // Clear the watchdog reset flag and disable the watchdog timer during setup
   MCUSR &= ~(1<<WDRF);  // Clear the watchdog reset flag
@@ -178,11 +184,17 @@ void loop() {
     char timestamp[20];
     getTimestamp(timestamp, sizeof(timestamp));
 
-    // Build the data string with timestamp and patient ID
-    snprintf(dataString, sizeof(dataString), "%s,%s,%d,%d,%d,%d,%d%%,%d%%,%d%%,%d%%",
+    // Read the voltage drop across the 68k ohm resistor
+    int analogValue = analogRead(analogPin);
+    voltage = analogValue * (5.0 / 1023.0);  // Convert analog value to voltage
+    current = voltage / resistorValue;  // Calculate current using Ohm's Law (I = V/R)
+
+    // Build the data string with timestamp, patient ID, and additional voltage/current data
+    snprintf(dataString, sizeof(dataString), "%s,%s,%d,%d,%d,%d,%d%%,%d%%,%d%%,%d%%,%.2fV,%.2fmA",
              patientID, timestamp,
              redPeriodCount, greenPeriodCount, bluePeriodCount, clearPeriodCount,
-             redChangePercent, greenChangePercent, blueChangePercent, turbidityPercent);
+             redChangePercent, greenChangePercent, blueChangePercent, turbidityPercent,
+             voltage, current * 1000);  // Convert current to mA and format
 
     // Debug statement to print the data string
     Serial.print("Data String: ");
@@ -215,22 +227,38 @@ void loop() {
       sdWriteSuccess = false;
     }
 
-    // Display data on the LCD
-    displayDataOnLCD(redPeriodCount, greenPeriodCount, bluePeriodCount, clearPeriodCount, turbidityPercent);
-
-    // Display TXT-OK or TXT-ERR on the LCD
+    // Display data on the LCD with new layout
     lcd.clear();
-    if (sdWriteSuccess) {
-      lcd.setCursor(0, 0);
-      lcd.print("TXT-OK");
-    } else {
-      lcd.setCursor(0, 0);
-      lcd.print("TXT-ERR");
-    }
-    delay(1000); // Display the message for 1 second
+    lcd.setCursor(0, 0);
+    lcd.print("ID: ");
+    lcd.print(patientID.substring(0, 10));  // Display up to 10 characters of the ID
+    
+    lcd.setCursor(0, 1);
+    lcd.print("Clr:");
+    lcd.print(clearPeriodCount);
+    lcd.print(" Turb:");
+    lcd.print(turbidityPercent);
+    lcd.print("%");
 
-    // Return to displaying data
-    displayDataOnLCD(redPeriodCount, greenPeriodCount, bluePeriodCount, clearPeriodCount, turbidityPercent);
+    lcd.setCursor(0, 2);
+    lcd.print("R:");
+    lcd.print(redPeriodCount);
+    lcd.print(" G:");
+    lcd.print(greenPeriodCount);
+    lcd.print(" B:");
+    lcd.print(bluePeriodCount);
+
+    lcd.setCursor(0, 3);
+    lcd.print("V:");
+    lcd.print(voltage, 2);  // Display the voltage with 2 decimal places
+    lcd.print(" I:");
+    lcd.print(current * 1000, 2);  // Display the current in mA
+    lcd.print(" T:");
+    
+    char timeBuffer[6];
+    DateTime now = rtc.now();
+    snprintf(timeBuffer, sizeof(timeBuffer), "%02d:%02d", now.hour(), now.minute());
+    lcd.print(timeBuffer);
 
     // Short delay before the next loop iteration
     delay(1000);
@@ -314,37 +342,6 @@ void getTimestamp(char* buffer, size_t bufferSize) {
   snprintf(buffer, bufferSize, "%04d/%02d/%02d %02d:%02d:%02d",
            now.year(), now.month(), now.day(),
            now.hour(), now.minute(), now.second());
-}
-
-void displayDataOnLCD(int redCount, int greenCount, int blueCount, int clearCount, int turbidityPercent) {
-  lcd.clear();
-  lcd.setCursor(0, 0);
-  lcd.print("ID:");
-  lcd.print(patientID);
-
-  lcd.setCursor(0, 1);
-  lcd.print("Turb:");
-  lcd.print(turbidityPercent);
-  lcd.print("%");
-
-  lcd.setCursor(10, 1);
-  lcd.print("Clr:");
-  lcd.print(clearCount);
-
-  lcd.setCursor(0, 2);
-  lcd.print("R:");
-  lcd.print(redCount);
-  lcd.print(" G:");
-  lcd.print(greenCount);
-
-  lcd.setCursor(0, 3);
-  lcd.print("B:");
-  lcd.print(blueCount);
-  lcd.print(" T:");
-  char timeBuffer[6];
-  DateTime now = rtc.now();
-  snprintf(timeBuffer, sizeof(timeBuffer), "%02d:%02d", now.hour(), now.minute());
-  lcd.print(timeBuffer);
 }
 
 void readPatientID() {
