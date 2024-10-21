@@ -263,12 +263,12 @@ void loop() {
     lcd.print(voltageString);  // Display the formatted voltage
     lcd.print(" I:");
     lcd.print(currentString);  // Display the formatted current in mA
-    //lcd.print(" T:");
+    lcd.print(" T:");
     
-    //char timeBuffer[6];
-    //DateTime now = rtc.now();
-    //snprintf(timeBuffer, sizeof(timeBuffer), "%02d:%02d", now.hour(), now.minute());
-    //lcd.print(timeBuffer);
+    char timeBuffer[6];
+    DateTime now = rtc.now();
+    snprintf(timeBuffer, sizeof(timeBuffer), "%02d%02d", now.hour(), now.minute());
+    lcd.print(timeBuffer);
 
     // Short delay before the next loop iteration
     delay(1000);
