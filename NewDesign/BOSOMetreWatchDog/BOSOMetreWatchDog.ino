@@ -189,12 +189,18 @@ void loop() {
     voltage = analogValue * (5.0 / 1023.0);  // Convert analog value to voltage
     current = voltage / resistorValue;  // Calculate current using Ohm's Law (I = V/R)
 
+    // Convert voltage and current to strings using dtostrf
+    char voltageString[8];
+    char currentString[8];
+    dtostrf(voltage, 4, 2, voltageString);  // Convert voltage to string
+    dtostrf(current * 1000, 4, 2, currentString);  // Convert current to string (in mA)
+
     // Build the data string with timestamp, patient ID, and additional voltage/current data
-    snprintf(dataString, sizeof(dataString), "%s,%s,%d,%d,%d,%d,%d%%,%d%%,%d%%,%d%%,%.2fV,%.2fmA",
+    snprintf(dataString, sizeof(dataString), "%s,%s,%d,%d,%d,%d,%d%%,%d%%,%d%%,%d%%,%sV,%smA",
              patientID, timestamp,
              redPeriodCount, greenPeriodCount, bluePeriodCount, clearPeriodCount,
              redChangePercent, greenChangePercent, blueChangePercent, turbidityPercent,
-             voltage, current * 1000);  // Convert current to mA and format
+             voltageString, currentString);
 
     // Debug statement to print the data string
     Serial.print("Data String: ");
@@ -254,15 +260,15 @@ void loop() {
 
     lcd.setCursor(0, 3);
     lcd.print("V:");
-    lcd.print(voltage, 2);  // Display the voltage with 2 decimal places
+    lcd.print(voltageString);  // Display the formatted voltage
     lcd.print(" I:");
-    lcd.print(current * 1000, 2);  // Display the current in mA
-    lcd.print(" T:");
+    lcd.print(currentString);  // Display the formatted current in mA
+    //lcd.print(" T:");
     
-    char timeBuffer[6];
-    DateTime now = rtc.now();
-    snprintf(timeBuffer, sizeof(timeBuffer), "%02d:%02d", now.hour(), now.minute());
-    lcd.print(timeBuffer);
+    //char timeBuffer[6];
+    //DateTime now = rtc.now();
+    //snprintf(timeBuffer, sizeof(timeBuffer), "%02d:%02d", now.hour(), now.minute());
+    //lcd.print(timeBuffer);
 
     // Short delay before the next loop iteration
     delay(1000);
