@@ -59,7 +59,7 @@ void readPatientID();
 void updatePatientID();
 
 // Define the analog pin for voltage reading
-const int analogPin = A0;  // Pin connected to the resistor and white LED junction
+const int analogPin = A5;  // Pin connected to the resistor and white LED junction
 float voltage;
 float current;
 float resistorValue = 68000.0;  // 68k ohms
