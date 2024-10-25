@@ -78,7 +78,6 @@ void setup() {
 
   // Set up the sensor pins
   setupSensorPins();
-  Serial.println("Sensor pins setup completed.");
 
   // Set up the shutdown pin and green LED pin
   pinMode(shutdownPin, INPUT_PULLUP); // Using internal pull-up resistor
@@ -88,9 +87,9 @@ void setup() {
   digitalWrite(greenLEDPin, HIGH);
 
   // Initialize SD card
-  Serial.print("Initializing SD card...");
+  Serial.print("SD card test");
   if (!SD.begin(chipSelect)) {
-    Serial.println("SD card initialization failed or not present!");
+    Serial.println("SD card failed!");
     lcd.init();
     lcd.backlight();
     lcd.clear();
@@ -101,7 +100,7 @@ void setup() {
       blinkLED(200); // Fast blink
     }
   }
-  Serial.println("Initialization done.");
+  Serial.println("INIT-OK!");
 
   // Initialize the LCD
   lcd.init();
@@ -111,12 +110,12 @@ void setup() {
 
   // Initialize RTC
   if (!rtc.begin()) {
-    Serial.println("Couldn't find RTC");
+    Serial.println("No RTC");
     while (1); // Halt if RTC not found
   }
 
   if (rtc.lostPower()) {
-    Serial.println("RTC lost power, setting the time!");
+    Serial.println("RTC reset");
     rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
   }
 
@@ -126,7 +125,7 @@ void setup() {
     readPatientID();
     EEPROM.put(patientIDAddress, patientID);
   } else {
-    Serial.print("Patient ID loaded from EEPROM: ");
+    Serial.print("Patient ID from EEPROM: ");
     Serial.println(patientID);
     lcd.clear();
     lcd.print("Patient ID: ");
@@ -187,20 +186,17 @@ void loop() {
     // Read the voltage drop across the 68k ohm resistor
     int analogValue = analogRead(analogPin);
     voltage = analogValue * (5.0 / 1023.0);  // Convert analog value to voltage
-    current = voltage / resistorValue;  // Calculate current using Ohm's Law (I = V/R)
 
     // Convert voltage and current to strings using dtostrf
     char voltageString[8];
-    char currentString[8];
     dtostrf(voltage, 4, 2, voltageString);  // Convert voltage to string
-    dtostrf(current * 1000, 4, 2, currentString);  // Convert current to string (in mA)
 
     // Build the data string with timestamp, patient ID, and additional voltage/current data
-    snprintf(dataString, sizeof(dataString), "%s,%s,%d,%d,%d,%d,%d%%,%d%%,%d%%,%d%%,%sV,%smA",
+    snprintf(dataString, sizeof(dataString), "%s,%s,%d,%d,%d,%d,%d%%,%d%%,%d%%,%d%%,%s",
              patientID, timestamp,
              redPeriodCount, greenPeriodCount, bluePeriodCount, clearPeriodCount,
              redChangePercent, greenChangePercent, blueChangePercent, turbidityPercent,
-             voltageString, currentString);
+             voltageString);
 
     // Debug statement to print the data string
     Serial.print("Data String: ");
@@ -210,7 +206,7 @@ void loop() {
     if (!SD.begin(chipSelect)) {
       unsigned long currentMillis = millis();
       if (currentMillis - lastRetryTime >= retryInterval) {
-        Serial.println("SD card reinitialization failed! Retrying in 1 minute...");
+        Serial.println("SD card Re-INIT FAIL!");
         lcd.setCursor(0, 3);
         lcd.print("TXT-ERR: SD INIT");
         lastRetryTime = currentMillis;  // Update the last retry time
@@ -225,11 +221,11 @@ void loop() {
     if (sensorDataFile) {
       sensorDataFile.println(dataString);
       sensorDataFile.close();
-      Serial.println("Text file write complete");
+      Serial.println("TXT-Write-OK");
       sdWriteSuccess = true;
     } else {
       // if the file didn't open, print an error:
-      Serial.println("Error opening text file.");
+      Serial.println("TXT-ERR!");
       sdWriteSuccess = false;
     }
 
@@ -261,8 +257,6 @@ void loop() {
     lcd.setCursor(0, 3);
     lcd.print("V:");
     lcd.print(voltageString);  // Display the formatted voltage
-    lcd.print(" I:");
-    lcd.print(currentString);  // Display the formatted current in mA
     lcd.print(" T:");
     
     char timeBuffer[6];
@@ -311,9 +305,9 @@ void checkShutdown() {
   if (digitalRead(shutdownPin) == HIGH) {
     // Shutdown switch pressed
     if (!isShutdown) {
-      Serial.println("Shutdown switch pressed. Stopping SD card operations.");
+      Serial.println("On standby.");
       lcd.clear();
-      lcd.print("On standby...");
+      lcd.print("On standby.");
 
       // Close the file if it's open
       if (sensorDataFile) {
@@ -328,9 +322,9 @@ void checkShutdown() {
   } else {
     // Shutdown switch released
     if (isShutdown) {
-      Serial.println("Shutdown switch released. Restarting operations.");
+      Serial.println("Restarting.");
       lcd.clear();
-      lcd.print("Restarting...");
+      lcd.print("Restarting.");
 
       // Turn on the green LED to indicate normal operation
       digitalWrite(greenLEDPin, HIGH);
@@ -355,7 +349,7 @@ void getTimestamp(char* buffer, size_t bufferSize) {
 }
 
 void readPatientID() {
-  Serial.println("Please enter patient ID and press ENTER:");
+  Serial.println("Enter Patient ID:");
   while (Serial.available() == 0) {
     // Wait for input
   }
