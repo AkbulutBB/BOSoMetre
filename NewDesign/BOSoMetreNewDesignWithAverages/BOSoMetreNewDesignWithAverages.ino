@@ -408,11 +408,11 @@ void updateLCDDisplay(float redCount, float greenCount, float blueCount,
     lcd.print("%");
 
     lcd.setCursor(0, 2);
-    lcd.print("R:");         
+    lcd.print("R: ");         
     lcd.print(redCount, 0);
-    lcd.print("G:");
+    lcd.print("G: ");
     lcd.print(greenCount, 0);
-    lcd.print("B:");
+    lcd.print("B: ");
     lcd.print(blueCount, 0);
 
     lcd.setCursor(0, 3);
