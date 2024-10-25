@@ -239,11 +239,17 @@ void loop() {
       char voltageString[8];
       dtostrf(avgVoltage, 4, 2, voltageString);
 
-      snprintf(dataString, sizeof(dataString), "%s,%s,%.1f,%.1f,%.1f,%.1f,%d,%d,%d,%d,%s",
-               patientID, timestamp,
-               avgRed, avgGreen, avgBlue, avgClear,
-               redChangePercent, greenChangePercent, blueChangePercent, turbidityPercent,
-               voltageString);
+      char redString[10], greenString[10], blueString[10], clearString[10];
+      dtostrf(avgRed, 4, 2, redString);    // Convert avgRed to a string with 1 decimal
+      dtostrf(avgGreen, 4, 2, greenString); // Convert avgGreen to a string with 1 decimal
+      dtostrf(avgBlue, 4, 2, blueString);   // Convert avgBlue to a string with 1 decimal
+      dtostrf(avgClear, 4, 2, clearString); // Convert avgClear to a string with 1 decimal
+
+      snprintf(dataString, sizeof(dataString), "%s,%s,%s,%s,%s,%s,%d,%d,%d,%d,%s",
+         patientID, timestamp,
+         redString, greenString, blueString, clearString,
+         redChangePercent, greenChangePercent, blueChangePercent, turbidityPercent,
+         voltageString);
 
       if (SD.begin(chipSelect)) {
         sensorDataFile = SD.open("SENSOR.TXT", FILE_WRITE);
