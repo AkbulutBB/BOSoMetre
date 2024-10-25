@@ -179,7 +179,6 @@ void loop() {
     }
 
     if (currentTime - lastRecordTime >= SAMPLE_INTERVAL) {
-      digitalWrite(greenLEDPin, HIGH);
       
       float v = analogRead(analogPin) * (5.0 / 1023.0);
       
@@ -202,6 +201,13 @@ void loop() {
           lcd.print("P:"); 
           lcd.print((currentSample * 100) / SAMPLES_PER_MINUTE);
           lcd.print("%  ");
+
+          if ((((currentSample * 100) / SAMPLES_PER_MINUTE) % 2) == 0) {
+            digitalWrite(greenLEDPin, HIGH); 
+          } 
+          else {
+            digitalWrite(greenLEDPin, LOW);
+            }
         }
       } else {
         lcd.clear();
@@ -212,7 +218,6 @@ void loop() {
         delay(1000);
       }
       
-      digitalWrite(greenLEDPin, LOW);
       lastRecordTime = currentTime;
     }
 
@@ -251,11 +256,12 @@ void loop() {
 
       updateLCDDisplay(avgRed, avgGreen, avgBlue, avgClear, turbidityPercent, voltageString);
       clearArrays();
+      digitalWrite(greenLEDPin, LOW);
     }
     
     delay(50);
   } else {
-    digitalWrite(greenLEDPin, HIGH);
+    digitalWrite(greenLEDPin, LOW);
   }
 }
 
