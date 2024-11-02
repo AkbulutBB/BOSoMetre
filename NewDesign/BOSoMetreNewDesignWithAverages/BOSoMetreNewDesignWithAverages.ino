@@ -182,7 +182,7 @@ void loop() {
       
       float v = analogRead(analogPin) * (5.0 / 1023.0);
       
-      if (v >= 2.5) {
+      if (v >= 2.45) {
         int r = 0, g = 0, b = 0, c = 0;
         readColor(r, LOW, LOW);
         readColor(g, HIGH, HIGH);
