@@ -12,7 +12,7 @@ disp(head(data));
 
 % Extract relevant data
 timestamps = data.DurationInHours; % Time points
-sensorData = [data.R, data.G, data.B, data.C]; % Sensor readings
+sensorData = [data.R, data.G, data.B, data.C]; % Sensor readings (R, G, B, C)
 labels = data.BinaryInfected; % Infection status
 patientIDs = data.InStudyID; % Patient identifiers
 
@@ -27,9 +27,10 @@ disp(['Total samples: ', num2str(length(timestamps))]);
 colorIntensity = sum(sensorData(:, 1:3), 2); % Total intensity (R + G + B)
 colorRatios = [sensorData(:, 1) ./ (sensorData(:, 2) + 1e-6), ... % R/G
                sensorData(:, 2) ./ (sensorData(:, 3) + 1e-6), ... % G/B
-               sensorData(:, 3) ./ (sensorData(:, 1) + 1e-6)];   % B/R
+               sensorData(:, 3) ./ (sensorData(:, 1) + 1e-6)];    % B/R
 
 % Combine all features: Individual channels, turbidity (C), and derived features
+% Now X includes R, G, B, C, Intensity, R/G, G/B, B/R
 X = [sensorData, colorIntensity, colorRatios];
 
 % Handle missing labels (if any)
@@ -91,7 +92,7 @@ meanAccuracy = mean(accuracies);
 disp(['Leave-One-Patient-Out Mean Accuracy: ', num2str(meanAccuracy)]);
 
 % Overall confusion matrix
-overallConfMat = confusionmat(allTrueLabels, allPredictedLabels); % Removed 'Order' parameter
+overallConfMat = confusionmat(allTrueLabels, allPredictedLabels);
 disp('Overall Confusion Matrix:');
 disp(array2table(overallConfMat, 'VariableNames', cellstr(classNames), 'RowNames', cellstr(classNames)));
 
@@ -136,14 +137,15 @@ confusionchart(allTrueLabels, allPredictedLabels, 'Title', 'Traditional Model Co
 set(gca, 'FontSize', 12);
 
 % Plotting predictions vs actual labels per patient (optional)
-% For each patient, plot timestamps vs actual and predicted labels
-
 for i = 1:length(uniquePatients)
     patientID = uniquePatients(i);
     idx = patientIDs == patientID;
     patientTimestamps = timestamps(idx);
     patientLabels = y(idx);
-    patientPredictions = allPredictedLabels(idx);
+    
+    % Predict for this patient's data
+    patientData = X(idx, :);
+    patientPredictions = predict(model, patientData);
     
     figure;
     plot(patientTimestamps, double(patientLabels) - 1, 'bo-', 'LineWidth', 1.5, 'DisplayName', 'Actual Labels');
@@ -163,8 +165,7 @@ end
 % Optional: Feature importance using predictor importance estimates
 % This requires Statistics and Machine Learning Toolbox
 
-% Since fitcecoc doesn't directly support predictor importance,
-% we can train a bagged tree ensemble for this purpose
+% Train a bagged tree ensemble to estimate feature importance
 modelTree = TreeBagger(100, X, y, 'OOBPredictorImportance', 'on', 'Method', 'classification');
 
 % Get importance scores
@@ -179,21 +180,17 @@ title('Feature Importance');
 xticklabels({'R', 'G', 'B', 'C', 'Intensity', 'R/G', 'G/B', 'B/R'});
 xtickangle(45);
 
-% Advanced Model (Optional): Using LSTM for time-series data
-% This section requires Deep Learning Toolbox
-
+% Advanced Model: Using LSTM for time-series data
 % Prepare data for LSTM
-% Reshape data into sequences per patient
 sequences = {};
 sequenceLabels = {};
 
 for i = 1:length(uniquePatients)
     idx = patientIDs == uniquePatients(i);
-    % Extract the sequence of features for the patient
+    % Extract the sequence of features for the patient (including individual channels and derived features)
     sequences{end+1} = X(idx, :)'; % Size: [Features x TimeSteps]
     % Extract the sequence of labels for the patient
-    labels_i = y(idx)'; % Transpose to make it a row vector
-    % Ensure labels are categorical and match the time steps
+    labels_i = y(idx)'; % Row vector
     sequenceLabels{end+1} = labels_i;
 end
 
@@ -202,10 +199,10 @@ for i = 1:length(sequenceLabels)
     sequenceLabels{i} = categorical(sequenceLabels{i});
 end
 
-% Verify that sequences and labels have matching lengths and correct orientation
+% Verify sequences and labels have matching lengths
 for i = 1:length(sequenceLabels)
     seqLength = size(sequences{i}, 2); % Number of time steps
-    labelLength = length(sequenceLabels{i}); % Should be equal to seqLength
+    labelLength = length(sequenceLabels{i});
     if seqLength ~= labelLength
         error(['Mismatch in sequence and label length for sequence ', num2str(i)]);
     end
@@ -215,8 +212,8 @@ for i = 1:length(sequenceLabels)
     end
 end
 
-% Define LSTM network architecture with OutputMode 'sequence'
-inputSize = size(X, 2);
+% Define LSTM network architecture
+inputSize = size(X, 2); % Now includes all features
 numHiddenUnits = 50;
 numClasses = numel(classNames);
 
@@ -257,44 +254,44 @@ allTrueLabelsLSTM = categorical(allTrueLabelsLSTM);
 allPredictedLabelsLSTM = categorical(allPredictedLabelsLSTM);
 
 % Confusion matrix for LSTM model
-confMatLSTM = confusionmat(allTrueLabelsLSTM, allPredictedLabelsLSTM); % Removed 'Order' parameter
+confMatLSTM = confusionmat(allTrueLabelsLSTM, allPredictedLabelsLSTM);
 
 % Display LSTM performance
 disp('LSTM Model Confusion Matrix:');
 disp(array2table(confMatLSTM, 'VariableNames', cellstr(classNames), 'RowNames', cellstr(classNames)));
 
 % Compute overall metrics for LSTM model
-precision = zeros(numClasses, 1);
-recall = zeros(numClasses, 1);
-f1Score = zeros(numClasses, 1);
+precisionLSTM = zeros(numClasses, 1);
+recallLSTM = zeros(numClasses, 1);
+f1ScoreLSTM = zeros(numClasses, 1);
 
 for c = 1:numClasses
     tp = confMatLSTM(c, c);
     fp = sum(confMatLSTM(:, c)) - tp;
     fn = sum(confMatLSTM(c, :)) - tp;
     if (tp + fp) == 0
-        precision(c) = 0;
+        precisionLSTM(c) = 0;
     else
-        precision(c) = tp / (tp + fp);
+        precisionLSTM(c) = tp / (tp + fp);
     end
     if (tp + fn) == 0
-        recall(c) = 0;
+        recallLSTM(c) = 0;
     else
-        recall(c) = tp / (tp + fn);
+        recallLSTM(c) = tp / (tp + fn);
     end
-    if (precision(c) + recall(c)) == 0
-        f1Score(c) = 0;
+    if (precisionLSTM(c) + recallLSTM(c)) == 0
+        f1ScoreLSTM(c) = 0;
     else
-        f1Score(c) = 2 * (precision(c) * recall(c)) / (precision(c) + recall(c));
+        f1ScoreLSTM(c) = 2 * (precisionLSTM(c) * recallLSTM(c)) / (precisionLSTM(c) + recallLSTM(c));
     end
 end
 
 % Display LSTM metrics
 for c = 1:numClasses
     disp(['LSTM Class ', char(classNames(c)), ':']);
-    disp(['  Precision: ', num2str(precision(c))]);
-    disp(['  Recall: ', num2str(recall(c))]);
-    disp(['  F1-Score: ', num2str(f1Score(c))]);
+    disp(['  Precision: ', num2str(precisionLSTM(c))]);
+    disp(['  Recall: ', num2str(recallLSTM(c))]);
+    disp(['  F1-Score: ', num2str(f1ScoreLSTM(c))]);
 end
 
 % Plot Confusion Matrix for LSTM Model
@@ -307,7 +304,7 @@ for i = 1:length(uniquePatients)
     patientID = uniquePatients(i);
     idx = patientIDs == patientID;
     
-    % Extract timestamps, actual labels, and predicted labels for the patient
+    % Extract patient data
     patientTimestamps = timestamps(idx);
     patientLabels = y(idx);
     patientSequence = X(idx, :)';
