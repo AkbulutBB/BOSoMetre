@@ -44,9 +44,12 @@ patientIDs = patientIDs(hasLabel);
 [X, mu, sigma] = zscore(X);
 
 % Split data into training and testing using Leave-One-Patient-Out Cross-Validation
+% Unique patients in the dataset
 uniquePatients = unique(patientIDs);
 
-% Initialize performance metrics
+% Simulate an unknown patient by holding out one patient for testing
+% Train on all other patients
+numPatients = length(uniquePatients);
 accuracies = [];
 confusionMatrices = [];
 
@@ -54,46 +57,49 @@ confusionMatrices = [];
 allTrueLabels = [];
 allPredictedLabels = [];
 
-for i = 1:length(uniquePatients)
+% Loop over all patients to simulate unknown patient scenario
+for i = 1:numPatients
+    % Select one patient as the unknown test patient
     testPatient = uniquePatients(i);
-    trainIdx = patientIDs ~= testPatient;
-    testIdx = patientIDs == testPatient;
+    trainIdx = patientIDs ~= testPatient; % Train on all others
+    testIdx = patientIDs == testPatient; % Test on this patient
     
+    % Split data
     X_train = X(trainIdx, :);
     y_train = y(trainIdx);
     X_test = X(testIdx, :);
     y_test = y(testIdx);
     
-    % Train multiclass model
+    % Train a model on known patients
     model = fitcecoc(X_train, y_train);
     
-    % Predict on test data
+    % Predict on the unknown patient
     y_pred = predict(model, X_test);
     
     % Evaluate performance
     accuracy = sum(y_pred == y_test) / length(y_test);
     accuracies = [accuracies; accuracy];
     
-    % Confusion matrix
+    % Compute confusion matrix
     classNames = categories(y);
-    confMat = confusionmat(y_test, y_pred); % Removed 'Order' parameter
+    confMat = confusionmat(y_test, y_pred);
     confusionMatrices(:, :, i) = confMat;
     
-    % Collect for overall performance
+    % Collect overall predictions
     allTrueLabels = [allTrueLabels; y_test];
     allPredictedLabels = [allPredictedLabels; y_pred];
     
-    % Display performance for this patient
-    disp(['Patient ', num2str(testPatient), ' Accuracy: ', num2str(accuracy)]);
+    % Display performance for the unknown patient
+    disp(['Simulated Unknown Patient ', num2str(testPatient), ' Accuracy: ', num2str(accuracy)]);
 end
 
-% Overall performance
+% Overall performance metrics
 meanAccuracy = mean(accuracies);
-disp(['Leave-One-Patient-Out Mean Accuracy: ', num2str(meanAccuracy)]);
+disp(['Simulated Unknown Patient Mean Accuracy: ', num2str(meanAccuracy)]);
 
-% Overall confusion matrix
+% Aggregate confusion matrix
 overallConfMat = confusionmat(allTrueLabels, allPredictedLabels);
-disp('Overall Confusion Matrix:');
+disp('Overall Confusion Matrix for Simulated Unknown Patient Scenario:');
 disp(array2table(overallConfMat, 'VariableNames', cellstr(classNames), 'RowNames', cellstr(classNames)));
 
 % Compute overall metrics
