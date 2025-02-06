@@ -1,0 +1,4 @@
+Class,Sensitivity,Specificity,True Positives (TP),False Negatives (FN),True Negatives (TN),False Positives (FP)
+1.0,1.0,0.9081632653061225,107,0,89,9
+NaN,0.2222222222222222,0.9633507853403142,6,21,184,7
+0.0,0.974025974025974,0.890625,75,2,114,14

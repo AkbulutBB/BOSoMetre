@@ -1,0 +1,75 @@
+%% Leave-One-Patient-Out Cross-Validation (LOPO-CV) for Subspace KNN Ensemble
+clc;
+
+% Load/prepare data (replace with your dataset name)
+data = BOSoMetreDataCSFDataForTraining;  % Ensure this exists in workspace
+
+% Classification target (binary or triphasic)
+classificationType = 'triphasic';  % Options: 'binary' or 'triphasic'
+switch lower(classificationType)
+    case 'binary'
+        Y = data.infClassIDSA;
+    case 'triphasic'
+        Y = data.triClassIDSA;
+    otherwise
+        error('Use "binary" or "triphasic" for classificationType');
+end
+
+% Convert Y to numeric if categorical
+if iscategorical(Y), Y = grp2idx(Y) - 1; end
+
+% Predictors: RPerc, GPerc, BPerc, CPerc
+X = data{:, {'RPerc','GPerc','BPerc','CPerc'}};
+patientIDs = data.InStudyID;  % Column containing unique patient IDs
+
+% Model parameters
+numNeighbors = 10;
+numLearningCycles = 60;
+subspaceSize = 2;  % Number of predictors per subspace (1-4)
+
+% Initialize storage
+uniquePatients = unique(patientIDs);
+numPatients = numel(uniquePatients);
+predictedLabels = nan(size(Y));  % Stores all predictions
+
+%% Perform Leave-One-Patient-Out CV
+for i = 1:numPatients
+    % Get indices for current patient
+    testIdx = (patientIDs == uniquePatients(i));
+    trainIdx = ~testIdx;
+    
+    % Train subspace KNN ensemble
+    knnTemplate = templateKNN('NumNeighbors', numNeighbors);
+    model = fitcensemble(X(trainIdx,:), Y(trainIdx), ...
+        'Method', 'Subspace', ...
+        'Learners', knnTemplate, ...
+        'NumLearningCycles', numLearningCycles, ...
+        'NPredToSample', subspaceSize);
+    
+    % Predict left-out patient
+    predictedLabels(testIdx) = predict(model, X(testIdx,:));
+end
+
+%% Calculate Performance Metrics
+% Convert to double for comparisons
+Y = double(Y);
+predictedLabels = double(predictedLabels);
+
+% Confusion matrix
+[confMat, order] = confusionmat(Y, predictedLabels);
+disp('Confusion Matrix:');
+disp(array2table(confMat, 'RowNames', strcat('True_', cellstr(num2str(order))), ...
+                          'VariableNames', strcat('Predicted_', cellstr(num2str(order)))));
+
+% Misclassification rate
+misclassRate = mean(predictedLabels ~= Y);
+fprintf('\nLeave-One-Patient-Out Misclassification Rate: %.2f%%\n', misclassRate*100);
+
+% Precision/Recall/F1 (for binary classification only)
+if numel(order) == 2
+    precision = confMat(2,2) / sum(confMat(:,2));
+    recall = confMat(2,2) / sum(confMat(2,:));
+    f1Score = 2 * (precision * recall) / (precision + recall);
+    fprintf('Precision: %.2f%%, Recall: %.2f%%, F1-Score: %.2f%%\n', ...
+            precision*100, recall*100, f1Score*100);
+end
