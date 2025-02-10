@@ -1,0 +1,49 @@
+Starting Gaussian HMM LOOCV analysis at 09-Feb-2025 09:28:44
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 46)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',46,0)">line 46</a>)
+Field DateTime is missing from processedcsfdata
+} 
+HMMModel
+Starting Gaussian HMM LOOCV analysis at 09-Feb-2025 09:29:38
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 46)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',46,0)">line 46</a>)
+Field DateTime is missing from processedcsfdata
+} 
+HMMModel
+Starting Gaussian HMM LOOCV analysis at 09-Feb-2025 09:33:47
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 46)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',46,0)">line 46</a>)
+Field DateTime  is missing from processedcsfdata
+} 
+HMMModel
+Starting Gaussian HMM LOOCV analysis at 09-Feb-2025 09:34:28
+
+LOOCV: Holding out Patient 5
+
+LOOCV: Holding out Patient 6
+
+LOOCV: Holding out Patient 7
+
+LOOCV: Holding out Patient 8
+
+LOOCV: Holding out Patient 10
+
+LOOCV: Holding out Patient 11
+
+LOOCV: Holding out Patient 14
+
+LOOCV: Holding out Patient 15
+
+LOOCV: Holding out Patient 16
+
+LOOCV: Holding out Patient 19
+
+LOOCV: Holding out Patient 21
+
+LOOCV: Holding out Patient 22
+
+LOOCV Gaussian HMM Model Performance:
+Accuracy: 0.38
+F1 (Clean): 0.5557, F1 (Infected): 0.0000
+Confusion Matrix:
+   399     0
+   638     0
+
+Misclassified cases exported to GaussianHMM_LOOCV_misclassified_cases.csv

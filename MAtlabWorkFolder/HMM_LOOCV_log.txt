@@ -1,0 +1,166 @@
+Starting HMM LOOCV analysis at 09-Feb-2025 09:16:44
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('tabular/dotReference', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\datatypes\tabular\@tabular\dotReference.m', 229)" style="font-weight:bold"> . </a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\datatypes\tabular\@tabular\dotReference.m',229,0)">line 229</a>)
+Unrecognized table variable name 'DateTimeStr'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 33)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',33,0)">line 33</a>)
+datetime_strings = data.DateTimeStr;  % e.g., '241023_1904'
+} 
+HMMModel
+Starting HMM LOOCV analysis at 09-Feb-2025 09:16:55
+
+LOOCV: Holding out Patient 5
+[Warning: HMM training failed for test patient 5: Dimensions of arrays being concatenated are not
+consistent.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 98)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',98,0)">line 98</a>)] 
+[Warning: HMM decoding error for test patient 5 in segment 1: SEQ must consist of integers between 1 and
+2.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 127)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',127,0)">line 127</a>)] 
+
+LOOCV: Holding out Patient 6
+[Warning: HMM training failed for test patient 6: SEQ must be a vector of integers between 1 and 2.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 98)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',98,0)">line 98</a>)] 
+
+LOOCV: Holding out Patient 7
+[Warning: HMM training failed for test patient 7: SEQ must be a vector of integers between 1 and 2.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 98)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',98,0)">line 98</a>)] 
+[Warning: HMM decoding error for test patient 7 in segment 5: SEQ must consist of integers between 1 and
+2.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 127)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',127,0)">line 127</a>)] 
+[Warning: HMM decoding error for test patient 7 in segment 6: SEQ must consist of integers between 1 and
+2.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 127)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',127,0)">line 127</a>)] 
+
+LOOCV: Holding out Patient 8
+[Warning: HMM training failed for test patient 8: SEQ must be a vector of integers between 1 and 2.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 98)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',98,0)">line 98</a>)] 
+[Warning: HMM decoding error for test patient 8 in segment 2: SEQ must consist of integers between 1 and
+2.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 127)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',127,0)">line 127</a>)] 
+
+LOOCV: Holding out Patient 10
+[Warning: HMM training failed for test patient 10: SEQ must be a vector of integers between 1 and 2.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 98)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',98,0)">line 98</a>)] 
+
+LOOCV: Holding out Patient 11
+[Warning: HMM training failed for test patient 11: SEQ must be a vector of integers between 1 and 2.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 98)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',98,0)">line 98</a>)] 
+[Warning: HMM decoding error for test patient 11 in segment 5: SEQ must consist of integers between 1 and
+2.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 127)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',127,0)">line 127</a>)] 
+
+LOOCV: Holding out Patient 14
+[Warning: HMM training failed for test patient 14: SEQ must be a vector of integers between 1 and 2.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 98)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',98,0)">line 98</a>)] 
+
+LOOCV: Holding out Patient 15
+[Warning: HMM training failed for test patient 15: SEQ must be a vector of integers between 1 and 2.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 98)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',98,0)">line 98</a>)] 
+[Warning: HMM decoding error for test patient 15 in segment 1: SEQ must consist of integers between 1 and
+2.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 127)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',127,0)">line 127</a>)] 
+
+LOOCV: Holding out Patient 16
+[Warning: HMM training failed for test patient 16: SEQ must be a vector of integers between 1 and 2.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 98)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',98,0)">line 98</a>)] 
+[Warning: HMM decoding error for test patient 16 in segment 1: SEQ must consist of integers between 1 and
+2.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 127)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',127,0)">line 127</a>)] 
+
+LOOCV: Holding out Patient 19
+[Warning: HMM training failed for test patient 19: SEQ must be a vector of integers between 1 and 2.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 98)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',98,0)">line 98</a>)] 
+
+LOOCV: Holding out Patient 21
+[Warning: HMM training failed for test patient 21: SEQ must be a vector of integers between 1 and 2.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 98)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',98,0)">line 98</a>)] 
+
+LOOCV: Holding out Patient 22
+[Warning: HMM training failed for test patient 22: SEQ must be a vector of integers between 1 and 2.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 98)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',98,0)">line 98</a>)] 
+
+LOOCV HMM Model Performance:
+Accuracy: 1.00
+F1 (Clean): 0.9986, F1 (Infected): 0.9992
+Confusion Matrix:
+         696           0
+           2        1246
+
+Misclassified cases exported to HMM_LOOCV_misclassified_cases.csv
+Starting HMM LOOCV analysis at 09-Feb-2025 09:21:26
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('tabular/dotReference', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\datatypes\tabular\@tabular\dotReference.m', 229)" style="font-weight:bold"> . </a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\datatypes\tabular\@tabular\dotReference.m',229,0)">line 229</a>)
+Unrecognized table variable name 'DateTimeStr'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 34)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',34,0)">line 34</a>)
+datetime_strings = data.DateTimeStr;  % e.g., '241023_1904'
+} 
+HMMModel
+Starting HMM LOOCV analysis at 09-Feb-2025 09:21:37
+
+LOOCV: Holding out Patient 5
+[Warning: HMM training failed for test patient 5: Dimensions of arrays being concatenated are not
+consistent.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 117)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',117,0)">line 117</a>)] 
+
+LOOCV: Holding out Patient 6
+[Warning: HMM training failed for test patient 6: Dimensions of arrays being concatenated are not
+consistent.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 117)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',117,0)">line 117</a>)] 
+
+LOOCV: Holding out Patient 7
+[Warning: HMM training failed for test patient 7: Dimensions of arrays being concatenated are not
+consistent.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 117)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',117,0)">line 117</a>)] 
+
+LOOCV: Holding out Patient 8
+[Warning: HMM training failed for test patient 8: Dimensions of arrays being concatenated are not
+consistent.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 117)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',117,0)">line 117</a>)] 
+
+LOOCV: Holding out Patient 10
+[Warning: HMM training failed for test patient 10: Dimensions of arrays being concatenated are not
+consistent.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 117)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',117,0)">line 117</a>)] 
+
+LOOCV: Holding out Patient 11
+[Warning: HMM training failed for test patient 11: Dimensions of arrays being concatenated are not
+consistent.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 117)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',117,0)">line 117</a>)] 
+
+LOOCV: Holding out Patient 14
+[Warning: HMM training failed for test patient 14: Dimensions of arrays being concatenated are not
+consistent.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 117)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',117,0)">line 117</a>)] 
+
+LOOCV: Holding out Patient 15
+[Warning: HMM training failed for test patient 15: Dimensions of arrays being concatenated are not
+consistent.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 117)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',117,0)">line 117</a>)] 
+
+LOOCV: Holding out Patient 16
+[Warning: HMM training failed for test patient 16: Dimensions of arrays being concatenated are not
+consistent.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 117)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',117,0)">line 117</a>)] 
+
+LOOCV: Holding out Patient 19
+[Warning: HMM training failed for test patient 19: Dimensions of arrays being concatenated are not
+consistent.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 117)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',117,0)">line 117</a>)] 
+
+LOOCV: Holding out Patient 21
+[Warning: HMM training failed for test patient 21: Dimensions of arrays being concatenated are not
+consistent.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 117)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',117,0)">line 117</a>)] 
+
+LOOCV: Holding out Patient 22
+[Warning: HMM training failed for test patient 22: Dimensions of arrays being concatenated are not
+consistent.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('HMMModel', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m', 117)" style="font-weight:bold">HMMModel</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\HMMModel.m',117,0)">line 117</a>)] 
+
+LOOCV HMM Model Performance:
+Accuracy: 1.00
+F1 (Clean): 0.9986, F1 (Infected): 0.9992
+Confusion Matrix:
+         696           0
+           2        1246
+
+Misclassified cases exported to HMM_LOOCV_misclassified_cases.csv

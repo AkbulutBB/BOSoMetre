@@ -1,0 +1,406 @@
+Starting experiments at 08-Feb-2025 23:25:52
+
+Balancing the Dataset...
+Final Balanced Dataset: Class 0 = 639, Class 1 = 639
+
+Running experiment: GentleBoost_50cycles_0.1 (Method: GentleBoost)
+
+LOOCV with Window Size: 1
+Exp: GentleBoost_50cycles_0.1, Method: GentleBoost, Window Size: 1 | Accuracy: 0.55 | F1 (Clean): 0.6624 | F1 (Infected): 0.2701 | Sensitivity: 0.2081 | Specificity: 0.8873 | FP Rate: 0.1127 | FN Rate: 0.7919
+
+LOOCV with Window Size: 2
+Exp: GentleBoost_50cycles_0.1, Method: GentleBoost, Window Size: 2 | Accuracy: 0.68 | F1 (Clean): 0.7282 | F1 (Infected): 0.6058 | Sensitivity: 0.4945 | Specificity: 0.8621 | FP Rate: 0.1379 | FN Rate: 0.5055
+
+LOOCV with Window Size: 4
+Exp: GentleBoost_50cycles_0.1, Method: GentleBoost, Window Size: 4 | Accuracy: 0.56 | F1 (Clean): 0.5889 | F1 (Infected): 0.5177 | Sensitivity: 0.4764 | Specificity: 0.6358 | FP Rate: 0.3642 | FN Rate: 0.5236
+
+LOOCV with Window Size: 6
+Exp: GentleBoost_50cycles_0.1, Method: GentleBoost, Window Size: 6 | Accuracy: 0.47 | F1 (Clean): 0.6348 | F1 (Infected): 0.0070 | Sensitivity: 0.0184 | Specificity: 0.9215 | FP Rate: 0.0785 | FN Rate: 0.9816
+
+LOOCV with Window Size: 8
+Exp: GentleBoost_50cycles_0.1, Method: GentleBoost, Window Size: 8 | Accuracy: 0.48 | F1 (Clean): 0.4258 | F1 (Infected): 0.4873 | Sensitivity: 0.5094 | Specificity: 0.4462 | FP Rate: 0.5538 | FN Rate: 0.4906
+
+LOOCV with Window Size: 12
+Exp: GentleBoost_50cycles_0.1, Method: GentleBoost, Window Size: 12 | Accuracy: 0.36 | F1 (Clean): 0.4170 | F1 (Infected): 0.1047 | Sensitivity: 0.1866 | Specificity: 0.5269 | FP Rate: 0.4731 | FN Rate: 0.8134
+
+LOOCV with Window Size: 24
+Exp: GentleBoost_50cycles_0.1, Method: GentleBoost, Window Size: 24 | Accuracy: 0.19 | F1 (Clean): 0.2029 | F1 (Infected): 0.0000 | Sensitivity: 0.0000 | Specificity: 0.3694 | FP Rate: 0.6306 | FN Rate: 1.0000
+
+Running experiment: GentleBoost_100cycles_0.1 (Method: GentleBoost)
+
+LOOCV with Window Size: 1
+[Warning: AdaBoostM1 exits because classification error = 0] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.modifier/AdaBoostM1/incrementNumIterations', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m', 95)" style="font-weight:bold">classreg.learning.modifier/AdaBoostM1/incrementNumIterations</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m',95,0)">line 95</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m', 462)" style="font-weight:bold">classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m',462,0)">line 462</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.classif/ClassificationEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m', 85)" style="font-weight:bold">classreg.learning.classif/ClassificationEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m',85,0)">line 85</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning/FitTemplate/fit', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m', 292)" style="font-weight:bold">classreg.learning/FitTemplate/fit</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m',292,0)">line 292</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m', 364)" style="font-weight:bold">fitensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m',364,0)">line 364</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 212)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',212,0)">line 212</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitToFullDataset', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m', 8)" style="font-weight:bold">classreg.learning.paramoptim.fitToFullDataset</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m',8,0)">line 8</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitoptimizing', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m', 50)" style="font-weight:bold">classreg.learning.paramoptim.fitoptimizing</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m',50,0)">line 50</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 192)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',192,0)">line 192</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('longanalysis0802>trainClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\longanalysis0802.m', 248)" style="font-weight:bold">longanalysis0802>trainClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\longanalysis0802.m',248,0)">line 248</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel_function', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m', 490)" style="font-weight:bold">parallel_function</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m',490,0)">line 490</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('longanalysis0802', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\longanalysis0802.m', 151)" style="font-weight:bold">longanalysis0802</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\longanalysis0802.m',151,0)">line 151</a>)] 
+Exp: GentleBoost_100cycles_0.1, Method: GentleBoost, Window Size: 1 | Accuracy: 0.50 | F1 (Clean): 0.6296 | F1 (Infected): 0.1723 | Sensitivity: 0.1674 | Specificity: 0.8419 | FP Rate: 0.1581 | FN Rate: 0.8326
+
+LOOCV with Window Size: 2
+Exp: GentleBoost_100cycles_0.1, Method: GentleBoost, Window Size: 2 | Accuracy: 0.65 | F1 (Clean): 0.7014 | F1 (Infected): 0.5766 | Sensitivity: 0.4770 | Specificity: 0.8225 | FP Rate: 0.1775 | FN Rate: 0.5230
+
+LOOCV with Window Size: 4
+Exp: GentleBoost_100cycles_0.1, Method: GentleBoost, Window Size: 4 | Accuracy: 0.66 | F1 (Clean): 0.7108 | F1 (Infected): 0.5734 | Sensitivity: 0.4634 | Specificity: 0.8472 | FP Rate: 0.1528 | FN Rate: 0.5366
+
+LOOCV with Window Size: 6
+Exp: GentleBoost_100cycles_0.1, Method: GentleBoost, Window Size: 6 | Accuracy: 0.59 | F1 (Clean): 0.6381 | F1 (Infected): 0.5298 | Sensitivity: 0.4608 | Specificity: 0.7212 | FP Rate: 0.2788 | FN Rate: 0.5392
+
+LOOCV with Window Size: 8
+Exp: GentleBoost_100cycles_0.1, Method: GentleBoost, Window Size: 8 | Accuracy: 0.65 | F1 (Clean): 0.7376 | F1 (Infected): 0.4538 | Sensitivity: 0.2950 | Specificity: 0.9949 | FP Rate: 0.0051 | FN Rate: 0.7050
+
+LOOCV with Window Size: 12
+Exp: GentleBoost_100cycles_0.1, Method: GentleBoost, Window Size: 12 | Accuracy: 0.71 | F1 (Clean): 0.7470 | F1 (Infected): 0.6722 | Sensitivity: 0.5888 | Specificity: 0.8387 | FP Rate: 0.1613 | FN Rate: 0.4112
+
+LOOCV with Window Size: 24
+Exp: GentleBoost_100cycles_0.1, Method: GentleBoost, Window Size: 24 | Accuracy: 0.52 | F1 (Clean): 0.3922 | F1 (Infected): 0.5875 | Sensitivity: 0.6883 | Specificity: 0.3612 | FP Rate: 0.6388 | FN Rate: 0.3117
+
+Running experiment: GentleBoost_50cycles_0.05 (Method: GentleBoost)
+
+LOOCV with Window Size: 1
+Exp: GentleBoost_50cycles_0.05, Method: GentleBoost, Window Size: 1 | Accuracy: 0.54 | F1 (Clean): 0.6503 | F1 (Infected): 0.2848 | Sensitivity: 0.2332 | Specificity: 0.8513 | FP Rate: 0.1487 | FN Rate: 0.7668
+
+LOOCV with Window Size: 2
+Exp: GentleBoost_50cycles_0.05, Method: GentleBoost, Window Size: 2 | Accuracy: 0.69 | F1 (Clean): 0.7342 | F1 (Infected): 0.6287 | Sensitivity: 0.5246 | Specificity: 0.8558 | FP Rate: 0.1442 | FN Rate: 0.4754
+
+LOOCV with Window Size: 4
+Exp: GentleBoost_50cycles_0.05, Method: GentleBoost, Window Size: 4 | Accuracy: 0.54 | F1 (Clean): 0.6409 | F1 (Infected): 0.3014 | Sensitivity: 0.2553 | Specificity: 0.8228 | FP Rate: 0.1772 | FN Rate: 0.7447
+
+LOOCV with Window Size: 6
+Exp: GentleBoost_50cycles_0.05, Method: GentleBoost, Window Size: 6 | Accuracy: 0.50 | F1 (Clean): 0.6163 | F1 (Infected): 0.1779 | Sensitivity: 0.1820 | Specificity: 0.8097 | FP Rate: 0.1903 | FN Rate: 0.8180
+
+LOOCV with Window Size: 8
+Exp: GentleBoost_50cycles_0.05, Method: GentleBoost, Window Size: 8 | Accuracy: 0.69 | F1 (Clean): 0.7603 | F1 (Infected): 0.5441 | Sensitivity: 0.3756 | Specificity: 0.9949 | FP Rate: 0.0051 | FN Rate: 0.6244
+
+LOOCV with Window Size: 12
+Exp: GentleBoost_50cycles_0.05, Method: GentleBoost, Window Size: 12 | Accuracy: 0.51 | F1 (Clean): 0.5199 | F1 (Infected): 0.5014 | Sensitivity: 0.4946 | Specificity: 0.5269 | FP Rate: 0.4731 | FN Rate: 0.5054
+
+LOOCV with Window Size: 24
+Exp: GentleBoost_50cycles_0.05, Method: GentleBoost, Window Size: 24 | Accuracy: 0.61 | F1 (Clean): 0.7028 | F1 (Infected): 0.4523 | Sensitivity: 0.3222 | Specificity: 0.9000 | FP Rate: 0.1000 | FN Rate: 0.6778
+
+Running experiment: AdaBoost_default (Method: AdaBoostM1)
+
+LOOCV with Window Size: 1
+Exp: AdaBoost_default, Method: AdaBoostM1, Window Size: 1 | Accuracy: 0.68 | F1 (Clean): 0.7421 | F1 (Infected): 0.5866 | Sensitivity: 0.4507 | Specificity: 0.9139 | FP Rate: 0.0861 | FN Rate: 0.5493
+
+LOOCV with Window Size: 2
+Exp: AdaBoost_default, Method: AdaBoostM1, Window Size: 2 | Accuracy: 0.69 | F1 (Clean): 0.6970 | F1 (Infected): 0.6797 | Sensitivity: 0.6609 | Specificity: 0.7163 | FP Rate: 0.2837 | FN Rate: 0.3391
+
+LOOCV with Window Size: 4
+Exp: AdaBoost_default, Method: AdaBoostM1, Window Size: 4 | Accuracy: 0.57 | F1 (Clean): 0.6633 | F1 (Infected): 0.3932 | Sensitivity: 0.2992 | Specificity: 0.8439 | FP Rate: 0.1561 | FN Rate: 0.7008
+
+LOOCV with Window Size: 6
+Exp: AdaBoost_default, Method: AdaBoostM1, Window Size: 6 | Accuracy: 0.59 | F1 (Clean): 0.6313 | F1 (Infected): 0.5470 | Sensitivity: 0.4908 | Specificity: 0.6962 | FP Rate: 0.3038 | FN Rate: 0.5092
+
+LOOCV with Window Size: 8
+Exp: AdaBoost_default, Method: AdaBoostM1, Window Size: 8 | Accuracy: 0.62 | F1 (Clean): 0.6480 | F1 (Infected): 0.5969 | Sensitivity: 0.5575 | Specificity: 0.6906 | FP Rate: 0.3094 | FN Rate: 0.4425
+
+LOOCV with Window Size: 12
+Exp: AdaBoost_default, Method: AdaBoostM1, Window Size: 12 | Accuracy: 0.51 | F1 (Clean): 0.5164 | F1 (Infected): 0.5014 | Sensitivity: 0.4964 | Specificity: 0.5215 | FP Rate: 0.4785 | FN Rate: 0.5036
+
+LOOCV with Window Size: 24
+Exp: AdaBoost_default, Method: AdaBoostM1, Window Size: 24 | Accuracy: 0.72 | F1 (Clean): 0.7338 | F1 (Infected): 0.7138 | Sensitivity: 0.6967 | Specificity: 0.7510 | FP Rate: 0.2490 | FN Rate: 0.3033
+
+Running experiment: RandomForest_default (Method: Bag)
+
+LOOCV with Window Size: 1
+Exp: RandomForest_default, Method: Bag, Window Size: 1 | Accuracy: 0.65 | F1 (Clean): 0.6844 | F1 (Infected): 0.5979 | Sensitivity: 0.5258 | Specificity: 0.7668 | FP Rate: 0.2332 | FN Rate: 0.4742
+
+LOOCV with Window Size: 2
+Exp: RandomForest_default, Method: Bag, Window Size: 2 | Accuracy: 0.54 | F1 (Clean): 0.6130 | F1 (Infected): 0.4099 | Sensitivity: 0.3613 | Specificity: 0.7242 | FP Rate: 0.2758 | FN Rate: 0.6387
+
+LOOCV with Window Size: 4
+Exp: RandomForest_default, Method: Bag, Window Size: 4 | Accuracy: 0.51 | F1 (Clean): 0.6192 | F1 (Infected): 0.2479 | Sensitivity: 0.2341 | Specificity: 0.7919 | FP Rate: 0.2081 | FN Rate: 0.7659
+
+LOOCV with Window Size: 6
+Exp: RandomForest_default, Method: Bag, Window Size: 6 | Accuracy: 0.67 | F1 (Clean): 0.7026 | F1 (Infected): 0.6258 | Sensitivity: 0.5543 | Specificity: 0.7830 | FP Rate: 0.2170 | FN Rate: 0.4457
+
+LOOCV with Window Size: 8
+Exp: RandomForest_default, Method: Bag, Window Size: 8 | Accuracy: 0.54 | F1 (Clean): 0.5404 | F1 (Infected): 0.5332 | Sensitivity: 0.5300 | Specificity: 0.5436 | FP Rate: 0.4564 | FN Rate: 0.4700
+
+LOOCV with Window Size: 12
+Exp: RandomForest_default, Method: Bag, Window Size: 12 | Accuracy: 0.51 | F1 (Clean): 0.6284 | F1 (Infected): 0.1996 | Sensitivity: 0.1920 | Specificity: 0.8244 | FP Rate: 0.1756 | FN Rate: 0.8080
+
+LOOCV with Window Size: 24
+Exp: RandomForest_default, Method: Bag, Window Size: 24 | Accuracy: 0.37 | F1 (Clean): 0.2767 | F1 (Infected): 0.2767 | Sensitivity: 0.3766 | Specificity: 0.3673 | FP Rate: 0.6327 | FN Rate: 0.6234
+
+Performance metrics exported to ensemble_performance_metrics.csv
+Variable importance exported to variable_importance_window24.csv
+Starting experiments at 09-Feb-2025 11:11:53
+
+Balancing the Dataset...
+Final Balanced Dataset: Class 0 = 639, Class 1 = 639
+
+Running experiment: GentleBoost_50cycles_0.1 (Method: GentleBoost)
+Optimized threshold: 0.02 with Youden's J: 0.2180
+Exp: GentleBoost_50cycles_0.1, Method: GentleBoost, Windowing: Dynamic, Labeling: majority, Optimized Threshold: 0.02 | Accuracy: 0.59 | F1 (Clean): 0.5376 | F1 (Infected): 0.6337
+
+Running experiment: GentleBoost_100cycles_0.1 (Method: GentleBoost)
+Optimized threshold: 0.32 with Youden's J: 0.2986
+Exp: GentleBoost_100cycles_0.1, Method: GentleBoost, Windowing: Dynamic, Labeling: majority, Optimized Threshold: 0.32 | Accuracy: 0.67 | F1 (Clean): 0.7377 | F1 (Infected): 0.5517
+
+Running experiment: GentleBoost_50cycles_0.05 (Method: GentleBoost)
+Optimized threshold: 0.00 with Youden's J: 0.2974
+Exp: GentleBoost_50cycles_0.05, Method: GentleBoost, Windowing: Dynamic, Labeling: majority, Optimized Threshold: 0.00 | Accuracy: 0.64 | F1 (Clean): 0.6147 | F1 (Infected): 0.6560
+
+Running experiment: AdaBoost_default (Method: AdaBoostM1)
+[Warning: AdaBoostM1 exits because classification error = 0] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.modifier/AdaBoostM1/incrementNumIterations', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m', 95)" style="font-weight:bold">classreg.learning.modifier/AdaBoostM1/incrementNumIterations</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m',95,0)">line 95</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m', 462)" style="font-weight:bold">classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m',462,0)">line 462</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.classif/ClassificationEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m', 85)" style="font-weight:bold">classreg.learning.classif/ClassificationEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m',85,0)">line 85</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning/FitTemplate/fit', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m', 292)" style="font-weight:bold">classreg.learning/FitTemplate/fit</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m',292,0)">line 292</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m', 364)" style="font-weight:bold">fitensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m',364,0)">line 364</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 212)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',212,0)">line 212</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitToFullDataset', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m', 8)" style="font-weight:bold">classreg.learning.paramoptim.fitToFullDataset</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m',8,0)">line 8</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitoptimizing', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m', 50)" style="font-weight:bold">classreg.learning.paramoptim.fitoptimizing</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m',50,0)">line 50</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 192)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',192,0)">line 192</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902>trainClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 310)" style="font-weight:bold">Models0902>trainClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',310,0)">line 310</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel_function', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m', 490)" style="font-weight:bold">parallel_function</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m',490,0)">line 490</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 166)" style="font-weight:bold">Models0902</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',166,0)">line 166</a>)] 
+Optimized threshold: 0.00 with Youden's J: 0.2846
+Exp: AdaBoost_default, Method: AdaBoostM1, Windowing: Dynamic, Labeling: majority, Optimized Threshold: 0.00 | Accuracy: 0.63 | F1 (Clean): 0.6188 | F1 (Infected): 0.6448
+
+Running experiment: RandomForest_default (Method: Bag)
+Optimized threshold: 0.00 with Youden's J: 0.3989
+Exp: RandomForest_default, Method: Bag, Windowing: Dynamic, Labeling: majority, Optimized Threshold: 0.00 | Accuracy: 0.69 | F1 (Clean): 0.6774 | F1 (Infected): 0.6995
+
+Running experiment: Stacking_Ensemble (Method: Stacking)
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902>trainClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 298)" style="font-weight:bold">Models0902>trainClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',298,0)">line 298</a>)
+Unrecognized field name "NumLearningCycles".
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902>trainStackingClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 499)" style="font-weight:bold">Models0902>trainStackingClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',499,0)">line 499</a>)
+            baseModel = trainClassifier(X_train(trIdx,:), y_train(trIdx), baseMethods{m}, struct(), performHyperparameterTuning, hyperOptMethod);
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 166)" style="font-weight:bold">Models0902</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',166,0)">line 166</a>)
+    parfor i = 1:n_patients
+} 
+Models0902
+Starting experiments at 09-Feb-2025 12:15:20
+
+Balancing the Dataset...
+Final Balanced Dataset: Class 0 = 639, Class 1 = 639
+
+Running experiment: GentleBoost_50cycles_0.1 (Method: GentleBoost)
+Optimized threshold: 0.00 with Youden's J: 0.2728
+Exp: GentleBoost_50cycles_0.1, Method: GentleBoost, Windowing: Dynamic, Labeling: majority, Optimized Threshold: 0.00 | Accuracy: 0.63 | F1 (Clean): 0.6339 | F1 (Infected): 0.6277
+
+Running experiment: GentleBoost_100cycles_0.1 (Method: GentleBoost)
+[Warning: AdaBoostM1 exits because classification error = 0] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.modifier/AdaBoostM1/incrementNumIterations', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m', 95)" style="font-weight:bold">classreg.learning.modifier/AdaBoostM1/incrementNumIterations</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m',95,0)">line 95</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m', 462)" style="font-weight:bold">classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m',462,0)">line 462</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.classif/ClassificationEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m', 85)" style="font-weight:bold">classreg.learning.classif/ClassificationEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m',85,0)">line 85</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning/FitTemplate/fit', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m', 292)" style="font-weight:bold">classreg.learning/FitTemplate/fit</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m',292,0)">line 292</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m', 364)" style="font-weight:bold">fitensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m',364,0)">line 364</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 212)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',212,0)">line 212</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitToFullDataset', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m', 8)" style="font-weight:bold">classreg.learning.paramoptim.fitToFullDataset</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m',8,0)">line 8</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitoptimizing', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m', 50)" style="font-weight:bold">classreg.learning.paramoptim.fitoptimizing</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m',50,0)">line 50</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 192)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',192,0)">line 192</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902>trainClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 303)" style="font-weight:bold">Models0902>trainClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',303,0)">line 303</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel_function', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m', 490)" style="font-weight:bold">parallel_function</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m',490,0)">line 490</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 166)" style="font-weight:bold">Models0902</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',166,0)">line 166</a>)] 
+Optimized threshold: 0.83 with Youden's J: 0.2339
+Exp: GentleBoost_100cycles_0.1, Method: GentleBoost, Windowing: Dynamic, Labeling: majority, Optimized Threshold: 0.83 | Accuracy: 0.64 | F1 (Clean): 0.7313 | F1 (Infected): 0.4706
+
+Running experiment: GentleBoost_50cycles_0.05 (Method: GentleBoost)
+Optimized threshold: 0.34 with Youden's J: 0.2228
+Exp: GentleBoost_50cycles_0.05, Method: GentleBoost, Windowing: Dynamic, Labeling: majority, Optimized Threshold: 0.34 | Accuracy: 0.61 | F1 (Clean): 0.6260 | F1 (Infected): 0.5917
+
+Running experiment: AdaBoost_default (Method: AdaBoostM1)
+[Warning: AdaBoostM1 exits because classification error = 0] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.modifier/AdaBoostM1/incrementNumIterations', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m', 95)" style="font-weight:bold">classreg.learning.modifier/AdaBoostM1/incrementNumIterations</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m',95,0)">line 95</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m', 462)" style="font-weight:bold">classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m',462,0)">line 462</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.classif/ClassificationEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m', 85)" style="font-weight:bold">classreg.learning.classif/ClassificationEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m',85,0)">line 85</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning/FitTemplate/fit', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m', 292)" style="font-weight:bold">classreg.learning/FitTemplate/fit</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m',292,0)">line 292</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m', 364)" style="font-weight:bold">fitensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m',364,0)">line 364</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 212)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',212,0)">line 212</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitToFullDataset', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m', 8)" style="font-weight:bold">classreg.learning.paramoptim.fitToFullDataset</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m',8,0)">line 8</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitoptimizing', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m', 50)" style="font-weight:bold">classreg.learning.paramoptim.fitoptimizing</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m',50,0)">line 50</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 192)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',192,0)">line 192</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902>trainClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 316)" style="font-weight:bold">Models0902>trainClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',316,0)">line 316</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel_function', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m', 490)" style="font-weight:bold">parallel_function</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m',490,0)">line 490</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 166)" style="font-weight:bold">Models0902</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',166,0)">line 166</a>)] 
+Optimized threshold: 0.01 with Youden's J: 0.3648
+Exp: AdaBoost_default, Method: AdaBoostM1, Windowing: Dynamic, Labeling: majority, Optimized Threshold: 0.01 | Accuracy: 0.67 | F1 (Clean): 0.6657 | F1 (Infected): 0.6805
+
+Running experiment: RandomForest_default (Method: Bag)
+Optimized threshold: 0.92 with Youden's J: 0.3115
+Exp: RandomForest_default, Method: Bag, Windowing: Dynamic, Labeling: majority, Optimized Threshold: 0.92 | Accuracy: 0.67 | F1 (Clean): 0.7366 | F1 (Infected): 0.5698
+
+Running experiment: Stacking_Ensemble (Method: Stacking)
+[Warning: AdaBoostM1 exits because classification error = 0] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.modifier/AdaBoostM1/incrementNumIterations', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m', 95)" style="font-weight:bold">classreg.learning.modifier/AdaBoostM1/incrementNumIterations</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m',95,0)">line 95</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m', 462)" style="font-weight:bold">classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m',462,0)">line 462</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.classif/ClassificationEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m', 85)" style="font-weight:bold">classreg.learning.classif/ClassificationEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m',85,0)">line 85</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning/FitTemplate/fit', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m', 292)" style="font-weight:bold">classreg.learning/FitTemplate/fit</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m',292,0)">line 292</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m', 364)" style="font-weight:bold">fitensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m',364,0)">line 364</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 212)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',212,0)">line 212</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitToFullDataset', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m', 8)" style="font-weight:bold">classreg.learning.paramoptim.fitToFullDataset</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m',8,0)">line 8</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitoptimizing', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m', 50)" style="font-weight:bold">classreg.learning.paramoptim.fitoptimizing</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m',50,0)">line 50</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 192)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',192,0)">line 192</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902>trainClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 303)" style="font-weight:bold">Models0902>trainClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',303,0)">line 303</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902>trainStackingClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 506)" style="font-weight:bold">Models0902>trainStackingClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',506,0)">line 506</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel_function', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m', 490)" style="font-weight:bold">parallel_function</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m',490,0)">line 490</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 166)" style="font-weight:bold">Models0902</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',166,0)">line 166</a>)] 
+[Warning: AdaBoostM1 exits because classification error = 0] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.modifier/AdaBoostM1/incrementNumIterations', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m', 95)" style="font-weight:bold">classreg.learning.modifier/AdaBoostM1/incrementNumIterations</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m',95,0)">line 95</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m', 462)" style="font-weight:bold">classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m',462,0)">line 462</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.classif/ClassificationEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m', 85)" style="font-weight:bold">classreg.learning.classif/ClassificationEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m',85,0)">line 85</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning/FitTemplate/fit', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m', 292)" style="font-weight:bold">classreg.learning/FitTemplate/fit</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m',292,0)">line 292</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m', 364)" style="font-weight:bold">fitensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m',364,0)">line 364</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 212)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',212,0)">line 212</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitToFullDataset', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m', 8)" style="font-weight:bold">classreg.learning.paramoptim.fitToFullDataset</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m',8,0)">line 8</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitoptimizing', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m', 50)" style="font-weight:bold">classreg.learning.paramoptim.fitoptimizing</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m',50,0)">line 50</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 192)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',192,0)">line 192</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902>trainClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 303)" style="font-weight:bold">Models0902>trainClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',303,0)">line 303</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902>trainStackingClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 506)" style="font-weight:bold">Models0902>trainStackingClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',506,0)">line 506</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel_function', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m', 490)" style="font-weight:bold">parallel_function</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m',490,0)">line 490</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 166)" style="font-weight:bold">Models0902</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',166,0)">line 166</a>)] 
+[Warning: AdaBoostM1 exits because classification error = 0] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.modifier/AdaBoostM1/incrementNumIterations', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m', 95)" style="font-weight:bold">classreg.learning.modifier/AdaBoostM1/incrementNumIterations</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m',95,0)">line 95</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m', 462)" style="font-weight:bold">classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m',462,0)">line 462</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.classif/ClassificationEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m', 85)" style="font-weight:bold">classreg.learning.classif/ClassificationEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m',85,0)">line 85</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning/FitTemplate/fit', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m', 292)" style="font-weight:bold">classreg.learning/FitTemplate/fit</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m',292,0)">line 292</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m', 364)" style="font-weight:bold">fitensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m',364,0)">line 364</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 212)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',212,0)">line 212</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitToFullDataset', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m', 8)" style="font-weight:bold">classreg.learning.paramoptim.fitToFullDataset</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m',8,0)">line 8</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitoptimizing', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m', 50)" style="font-weight:bold">classreg.learning.paramoptim.fitoptimizing</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m',50,0)">line 50</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 192)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',192,0)">line 192</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902>trainClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 303)" style="font-weight:bold">Models0902>trainClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',303,0)">line 303</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902>trainStackingClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 506)" style="font-weight:bold">Models0902>trainStackingClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',506,0)">line 506</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel_function', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m', 490)" style="font-weight:bold">parallel_function</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m',490,0)">line 490</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 166)" style="font-weight:bold">Models0902</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',166,0)">line 166</a>)] 
+[Warning: AdaBoostM1 exits because classification error = 0] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.modifier/AdaBoostM1/incrementNumIterations', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m', 95)" style="font-weight:bold">classreg.learning.modifier/AdaBoostM1/incrementNumIterations</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m',95,0)">line 95</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m', 462)" style="font-weight:bold">classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m',462,0)">line 462</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.classif/ClassificationEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m', 85)" style="font-weight:bold">classreg.learning.classif/ClassificationEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m',85,0)">line 85</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning/FitTemplate/fit', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m', 292)" style="font-weight:bold">classreg.learning/FitTemplate/fit</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m',292,0)">line 292</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m', 364)" style="font-weight:bold">fitensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m',364,0)">line 364</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 212)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',212,0)">line 212</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitToFullDataset', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m', 8)" style="font-weight:bold">classreg.learning.paramoptim.fitToFullDataset</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m',8,0)">line 8</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitoptimizing', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m', 50)" style="font-weight:bold">classreg.learning.paramoptim.fitoptimizing</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m',50,0)">line 50</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 192)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',192,0)">line 192</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902>trainClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 303)" style="font-weight:bold">Models0902>trainClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',303,0)">line 303</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902>trainStackingClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 512)" style="font-weight:bold">Models0902>trainStackingClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',512,0)">line 512</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel_function', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m', 490)" style="font-weight:bold">parallel_function</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m',490,0)">line 490</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 166)" style="font-weight:bold">Models0902</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',166,0)">line 166</a>)] 
+Optimized threshold: 0.88 with Youden's J: 0.4821
+Exp: Stacking_Ensemble, Method: Stacking, Windowing: Dynamic, Labeling: majority, Optimized Threshold: 0.88 | Accuracy: 0.75 | F1 (Clean): 0.7953 | F1 (Infected): 0.6915
+
+Performance metrics exported to ensemble_performance_metrics.csv
+{Unrecognized function or variable 'suptitle'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Models0902', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m', 273)" style="font-weight:bold">Models0902</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\Models0902.m',273,0)">line 273</a>)
+    suptitle('Comparison of Original and Augmented Feature Distributions');
+} 
+stacking
+Starting experiments at 09-Feb-2025 14:37:16
+
+Balancing the Dataset...
+Final Balanced Dataset: Class 0 = 639, Class 1 = 639
+
+Running experiment: GentleBoost_50cycles_0.1 (Method: GentleBoost)
+Optimized threshold: 0.68 with Youden's J: 0.3068
+Exp: GentleBoost_50cycles_0.1, Method: GentleBoost, Windowing: Dynamic, Labeling: majority, Used Threshold: 0.50 | Accuracy: 0.66 | F1 (Clean): 0.7132 | F1 (Infected): 0.5707
+
+Running experiment: GentleBoost_100cycles_0.1 (Method: GentleBoost)
+Optimized threshold: 0.01 with Youden's J: 0.1845
+Exp: GentleBoost_100cycles_0.1, Method: GentleBoost, Windowing: Dynamic, Labeling: majority, Used Threshold: 0.50 | Accuracy: 0.46 | F1 (Clean): 0.5299 | F1 (Infected): 0.2820
+
+Running experiment: GentleBoost_50cycles_0.05 (Method: GentleBoost)
+Optimized threshold: 0.00 with Youden's J: 0.0606
+Exp: GentleBoost_50cycles_0.05, Method: GentleBoost, Windowing: Dynamic, Labeling: majority, Used Threshold: 0.50 | Accuracy: 0.27 | F1 (Clean): 0.2573 | F1 (Infected): 0.0471
+
+Running experiment: AdaBoost_default (Method: AdaBoostM1)
+Optimized threshold: 0.00 with Youden's J: 0.4386
+Exp: AdaBoost_default, Method: AdaBoostM1, Windowing: Dynamic, Labeling: majority, Used Threshold: 0.50 | Accuracy: 0.48 | F1 (Clean): 0.6049 | F1 (Infected): 0.1089
+
+Running experiment: RandomForest_default (Method: Bag)
+Optimized threshold: 0.84 with Youden's J: 0.4835
+Exp: RandomForest_default, Method: Bag, Windowing: Dynamic, Labeling: majority, Used Threshold: 0.50 | Accuracy: 0.74 | F1 (Clean): 0.7556 | F1 (Infected): 0.7186
+
+Running experiment: Stacking_Ensemble (Method: Stacking)
+[Warning: AdaBoostM1 exits because classification error = 0] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.modifier/AdaBoostM1/incrementNumIterations', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m', 95)" style="font-weight:bold">classreg.learning.modifier/AdaBoostM1/incrementNumIterations</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m',95,0)">line 95</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m', 462)" style="font-weight:bold">classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m',462,0)">line 462</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.classif/ClassificationEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m', 85)" style="font-weight:bold">classreg.learning.classif/ClassificationEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m',85,0)">line 85</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning/FitTemplate/fit', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m', 292)" style="font-weight:bold">classreg.learning/FitTemplate/fit</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m',292,0)">line 292</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m', 364)" style="font-weight:bold">fitensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m',364,0)">line 364</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 212)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',212,0)">line 212</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitToFullDataset', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m', 8)" style="font-weight:bold">classreg.learning.paramoptim.fitToFullDataset</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m',8,0)">line 8</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitoptimizing', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m', 50)" style="font-weight:bold">classreg.learning.paramoptim.fitoptimizing</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m',50,0)">line 50</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 192)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',192,0)">line 192</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('stacking>trainClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\stacking.m', 323)" style="font-weight:bold">stacking>trainClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\stacking.m',323,0)">line 323</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('stacking>trainStackingClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\stacking.m', 527)" style="font-weight:bold">stacking>trainStackingClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\stacking.m',527,0)">line 527</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel_function', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m', 490)" style="font-weight:bold">parallel_function</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m',490,0)">line 490</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('stacking', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\stacking.m', 180)" style="font-weight:bold">stacking</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\stacking.m',180,0)">line 180</a>)] 
+Optimized threshold: 0.94 with Youden's J: 0.3697
+Exp: Stacking_Ensemble, Method: Stacking, Windowing: Dynamic, Labeling: majority, Used Threshold: 0.50 | Accuracy: 0.47 | F1 (Clean): 0.2123 | F1 (Infected): 0.5841
+
+Performance metrics exported to ensemble_performance_metrics.csv
+Starting stacking ensemble experiments at 09-Feb-2025 16:49:28
+
+Balancing the Dataset...
+Final Balanced Dataset: Class 0 = 679, Class 1 = 679
+
+Running stacking ensemble experiment...
+[Warning: AdaBoostM1 exits because classification error = 0] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.modifier/AdaBoostM1/incrementNumIterations', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m', 95)" style="font-weight:bold">classreg.learning.modifier/AdaBoostM1/incrementNumIterations</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m',95,0)">line 95</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m', 462)" style="font-weight:bold">classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m',462,0)">line 462</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.classif/ClassificationEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m', 85)" style="font-weight:bold">classreg.learning.classif/ClassificationEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m',85,0)">line 85</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning/FitTemplate/fit', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m', 292)" style="font-weight:bold">classreg.learning/FitTemplate/fit</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m',292,0)">line 292</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m', 364)" style="font-weight:bold">fitensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m',364,0)">line 364</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 212)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',212,0)">line 212</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitToFullDataset', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m', 8)" style="font-weight:bold">classreg.learning.paramoptim.fitToFullDataset</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m',8,0)">line 8</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitoptimizing', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m', 50)" style="font-weight:bold">classreg.learning.paramoptim.fitoptimizing</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m',50,0)">line 50</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 192)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',192,0)">line 192</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlystacking>trainClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m', 351)" style="font-weight:bold">onlystacking>trainClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m',351,0)">line 351</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlystacking>trainStackingClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m', 311)" style="font-weight:bold">onlystacking>trainStackingClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m',311,0)">line 311</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel_function', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m', 490)" style="font-weight:bold">parallel_function</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m',490,0)">line 490</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlystacking', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m', 94)" style="font-weight:bold">onlystacking</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m',94,0)">line 94</a>)] 
+[Warning: AdaBoostM1 exits because classification error = 0] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.modifier/AdaBoostM1/incrementNumIterations', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m', 95)" style="font-weight:bold">classreg.learning.modifier/AdaBoostM1/incrementNumIterations</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m',95,0)">line 95</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m', 462)" style="font-weight:bold">classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m',462,0)">line 462</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.classif/ClassificationEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m', 85)" style="font-weight:bold">classreg.learning.classif/ClassificationEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m',85,0)">line 85</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning/FitTemplate/fit', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m', 292)" style="font-weight:bold">classreg.learning/FitTemplate/fit</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m',292,0)">line 292</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m', 364)" style="font-weight:bold">fitensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m',364,0)">line 364</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 212)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',212,0)">line 212</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitToFullDataset', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m', 8)" style="font-weight:bold">classreg.learning.paramoptim.fitToFullDataset</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m',8,0)">line 8</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitoptimizing', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m', 50)" style="font-weight:bold">classreg.learning.paramoptim.fitoptimizing</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m',50,0)">line 50</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 192)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',192,0)">line 192</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlystacking>trainClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m', 364)" style="font-weight:bold">onlystacking>trainClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m',364,0)">line 364</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlystacking>trainStackingClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m', 311)" style="font-weight:bold">onlystacking>trainStackingClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m',311,0)">line 311</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel_function', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m', 490)" style="font-weight:bold">parallel_function</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m',490,0)">line 490</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlystacking', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m', 94)" style="font-weight:bold">onlystacking</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m',94,0)">line 94</a>)] 
+[Warning: AdaBoostM1 exits because classification error = 0] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.modifier/AdaBoostM1/incrementNumIterations', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m', 95)" style="font-weight:bold">classreg.learning.modifier/AdaBoostM1/incrementNumIterations</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+modifier\AdaBoostM1.m',95,0)">line 95</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m', 462)" style="font-weight:bold">classreg.learning.ensemble/Ensemble/fitBuiltinEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+ensemble\Ensemble.m',462,0)">line 462</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.classif/ClassificationEnsemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m', 85)" style="font-weight:bold">classreg.learning.classif/ClassificationEnsemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+classif\ClassificationEnsemble.m',85,0)">line 85</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning/FitTemplate/fit', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m', 292)" style="font-weight:bold">classreg.learning/FitTemplate/fit</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FitTemplate.m',292,0)">line 292</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m', 364)" style="font-weight:bold">fitensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitensemble.m',364,0)">line 364</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 212)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',212,0)">line 212</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitToFullDataset', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m', 8)" style="font-weight:bold">classreg.learning.paramoptim.fitToFullDataset</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitToFullDataset.m',8,0)">line 8</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.paramoptim.fitoptimizing', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m', 50)" style="font-weight:bold">classreg.learning.paramoptim.fitoptimizing</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\+paramoptim\fitoptimizing.m',50,0)">line 50</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fitcensemble', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m', 192)" style="font-weight:bold">fitcensemble</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\fitcensemble.m',192,0)">line 192</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlystacking>trainClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m', 364)" style="font-weight:bold">onlystacking>trainClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m',364,0)">line 364</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlystacking>trainStackingClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m', 311)" style="font-weight:bold">onlystacking>trainStackingClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m',311,0)">line 311</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('parallel_function', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m', 490)" style="font-weight:bold">parallel_function</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\lang\parallel_function.m',490,0)">line 490</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlystacking', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m', 94)" style="font-weight:bold">onlystacking</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m',94,0)">line 94</a>)] 
+Optimized threshold: 0.99 with Youden's J: 0.3654
+Stacking Ensemble Results:
+Optimized Threshold: 0.99 | Accuracy: 0.71 | F1 (Clean): 0.7855 | F1 (Infected): 0.5572
+Sensitivity: 0.4050 | Specificity: 0.9604
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('struct2table', 'C:\Program Files\MATLAB\R2024a\toolbox\matlab\datatypes\tabular\struct2table.m', 97)" style="font-weight:bold">struct2table</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\matlab\datatypes\tabular\struct2table.m',97,0)">line 97</a>)
+Input structure is a scalar, but its fields have different numbers of rows. If you intended to create a
+table with one row, set 'AsArray' to true.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlystacking', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m', 171)" style="font-weight:bold">onlystacking</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlystacking.m',171,0)">line 171</a>)
+resultsTable = struct2table(results);
+} 
+Longanalysis0902
