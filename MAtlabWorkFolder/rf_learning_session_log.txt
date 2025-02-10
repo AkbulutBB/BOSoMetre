@@ -1,0 +1,1192 @@
+Starting Random Forest experiments at 10-Feb-2025 21:49:41
+
+Final Balanced Dataset: Class 0 = 679, Class 1 = 679
+
+Experiment 1: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.30
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlyRandomForest>predictRandomForestClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m', 228)" style="font-weight:bold">onlyRandomForest>predictRandomForestClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m',228,0)">line 228</a>)
+Index in position 2 exceeds array bounds. Index must not exceed 1.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlyRandomForest>runRFExperiment', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m', 129)" style="font-weight:bold">onlyRandomForest>runRFExperiment</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m',129,0)">line 129</a>)
+    parfor i = 1:n_patients
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlyRandomForest', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m', 88)" style="font-weight:bold">onlyRandomForest</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m',88,0)">line 88</a>)
+            result = runRFExperiment(nt, ml, st, useScreeningThreshold, ...
+} 
+onlyRandomForest
+[Warning: <a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m',124,14)">File: onlyRandomForest.m Line: 124 Column: 14</a>
+The temporary variable 'windowed_features' will be cleared at the beginning of each iteration of the
+parfor-loop. If 'windowed_features' is used before it is set, a runtime error will occur. For more
+information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB, "Uninitialized Temporaries"</a>.] 
+[Warning: <a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m',124,33)">File: onlyRandomForest.m Line: 124 Column: 33</a>
+The temporary variable 'windowed_labels' will be cleared at the beginning of each iteration of the
+parfor-loop. If 'windowed_labels' is used before it is set, a runtime error will occur. For more
+information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB, "Uninitialized Temporaries"</a>.] 
+[Warning: <a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m',124,50)">File: onlyRandomForest.m Line: 124 Column: 50</a>
+The temporary variable 'windowed_patient_ids' will be cleared at the beginning of each iteration of the
+parfor-loop. If 'windowed_patient_ids' is used before it is set, a runtime error will occur. For more
+information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB, "Uninitialized Temporaries"</a>.] 
+Starting Random Forest experiments at 10-Feb-2025 21:52:59
+
+Final Balanced Dataset: Class 0 = 639, Class 1 = 639
+
+Experiment 1: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.30
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlyRandomForest>predictRandomForestClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m', 226)" style="font-weight:bold">onlyRandomForest>predictRandomForestClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m',226,0)">line 226</a>)
+Unrecognized function or variable 'infection_threshold'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlyRandomForest>runRFExperiment', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m', 121)" style="font-weight:bold">onlyRandomForest>runRFExperiment</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m',121,0)">line 121</a>)
+    parfor i = 1:n_patients
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlyRandomForest', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m', 85)" style="font-weight:bold">onlyRandomForest</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m',85,0)">line 85</a>)
+            result = runRFExperiment(nt, ml, st, useScreeningThreshold, infection_threshold, ...
+} 
+onlyRandomForest
+[Warning: <a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m',122,14)">File: onlyRandomForest.m Line: 122 Column: 14</a>
+The temporary variable 'windowed_features' will be cleared at the beginning of each iteration of the
+parfor-loop. If 'windowed_features' is used before it is set, a runtime error will occur. For more
+information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB, "Uninitialized Temporaries"</a>.] 
+[Warning: <a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m',122,33)">File: onlyRandomForest.m Line: 122 Column: 33</a>
+The temporary variable 'windowed_labels' will be cleared at the beginning of each iteration of the
+parfor-loop. If 'windowed_labels' is used before it is set, a runtime error will occur. For more
+information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB, "Uninitialized Temporaries"</a>.] 
+[Warning: <a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m',122,50)">File: onlyRandomForest.m Line: 122 Column: 50</a>
+The temporary variable 'windowed_patient_ids' will be cleared at the beginning of each iteration of the
+parfor-loop. If 'windowed_patient_ids' is used before it is set, a runtime error will occur. For more
+information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB, "Uninitialized Temporaries"</a>.] 
+Starting Random Forest experiments at 10-Feb-2025 21:54:59
+
+Final Balanced Dataset: Class 0 = 639, Class 1 = 639
+
+Experiment 1: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.30
+Optimized threshold: 0.66 with Youden's J: 0.4488
+
+Experiment 2: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.40
+Optimized threshold: 0.72 with Youden's J: 0.4441
+
+Experiment 3: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.50
+Optimized threshold: 0.86 with Youden's J: 0.4335
+
+Experiment 4: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.30
+Optimized threshold: 0.71 with Youden's J: 0.4446
+
+Experiment 5: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.40
+Optimized threshold: 0.52 with Youden's J: 0.4614
+
+Experiment 6: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.50
+Optimized threshold: 0.56 with Youden's J: 0.4511
+
+Experiment 7: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.30
+Optimized threshold: 0.66 with Youden's J: 0.4755
+
+Experiment 8: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.40
+Optimized threshold: 0.68 with Youden's J: 0.4658
+
+Experiment 9: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.50
+Optimized threshold: 0.71 with Youden's J: 0.4867
+
+Experiment 10: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.30
+Optimized threshold: 0.75 with Youden's J: 0.4907
+
+Experiment 11: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.40
+Optimized threshold: 0.85 with Youden's J: 0.4761
+
+Experiment 12: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.50
+Optimized threshold: 0.79 with Youden's J: 0.4561
+
+Experiment 13: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.30
+Optimized threshold: 0.85 with Youden's J: 0.4277
+
+Experiment 14: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.40
+Optimized threshold: 0.76 with Youden's J: 0.4504
+
+Experiment 15: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.50
+Optimized threshold: 0.56 with Youden's J: 0.4444
+
+Experiment 16: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.30
+Optimized threshold: 0.61 with Youden's J: 0.4296
+
+Experiment 17: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.40
+Optimized threshold: 0.59 with Youden's J: 0.5199
+
+Experiment 18: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.50
+Optimized threshold: 0.63 with Youden's J: 0.4238
+
+Experiment 19: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.30
+Optimized threshold: 0.79 with Youden's J: 0.4592
+
+Experiment 20: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.40
+Optimized threshold: 0.51 with Youden's J: 0.4385
+
+Experiment 21: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.50
+Optimized threshold: 0.75 with Youden's J: 0.4787
+
+Experiment 22: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.30
+Optimized threshold: 0.78 with Youden's J: 0.4415
+
+Experiment 23: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.40
+Optimized threshold: 0.72 with Youden's J: 0.4647
+
+Experiment 24: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.50
+Optimized threshold: 0.56 with Youden's J: 0.4316
+
+Experiment 25: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.30
+Optimized threshold: 0.57 with Youden's J: 0.4757
+
+Experiment 26: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.40
+Optimized threshold: 0.60 with Youden's J: 0.4594
+
+Experiment 27: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.50
+Optimized threshold: 0.59 with Youden's J: 0.4444
+
+All experiment results exported to rf_experiment_results.csv
+Starting Expanded Random Forest experiments at 10-Feb-2025 22:10:15
+
+Final Balanced Dataset: Class 0 = 639, Class 1 = 639
+
+Experiment 1: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 10
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('internal.stats.parseArgs', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\stats\+internal\+stats\parseArgs.m', 43)" style="font-weight:bold">internal.stats.parseArgs</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\stats\+internal\+stats\parseArgs.m',43,0)">line 43</a>)
+Invalid parameter name: Learners.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('classreg.learning.FullClassificationRegressionModel.prepareDataCR', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FullClassificationRegressionModel.m', 219)" style="font-weight:bold">classreg.learning.FullClassificationRegressionModel.prepareDataCR</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\+classreg\+learning\FullClassificationRegressionModel.m',219,0)">line 219</a>)
+                    internal.stats.parseArgs(args,defs,inputArgs{:});
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('ClassificationTree.prepareData', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\ClassificationTree.m', 749)" style="font-weight:bold">ClassificationTree.prepareData</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\classreg\ClassificationTree.m',749,0)">line 749</a>)
+                classreg.learning.FullClassificationRegressionModel.prepareDataCR(...
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('TreeBagger/init', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\stats\@TreeBagger\TreeBagger.m', 1347)" style="font-weight:bold">TreeBagger/init</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\stats\@TreeBagger\TreeBagger.m',1347,0)">line 1347</a>)
+                    ClassificationTree.prepareData(x,y,...
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('TreeBagger', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\stats\@TreeBagger\TreeBagger.m', 621)" style="font-weight:bold">TreeBagger</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\stats\@TreeBagger\TreeBagger.m',621,0)">line 621</a>)
+            bagger = init(bagger,X,Y,makeArgs{:});
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlyRandomForest>trainRandomForestClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m', 219)" style="font-weight:bold">onlyRandomForest>trainRandomForestClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m',219,0)">line 219</a>)
+    rfModel = TreeBagger(NTrees, X_train, y_train_cat, 'Method', 'classification', ...
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlyRandomForest>runRFExperiment', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m', 138)" style="font-weight:bold">onlyRandomForest>runRFExperiment</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m',138,0)">line 138</a>)
+    parfor i = 1:n_patients
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('onlyRandomForest', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m', 98)" style="font-weight:bold">onlyRandomForest</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\onlyRandomForest.m',98,0)">line 98</a>)
+                    result = runRFExperiment(nt, ml, st, useScreeningThreshold, infection_threshold, ...
+} 
+MoreOnlyRAndomForest
+[Warning: <a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\MoreOnlyRAndomForest.m',141,14)">File: MoreOnlyRAndomForest.m Line: 141 Column: 14</a>
+The temporary variable 'windowed_features' will be cleared at the beginning of each iteration of the
+parfor-loop. If 'windowed_features' is used before it is set, a runtime error will occur. For more
+information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB, "Uninitialized Temporaries"</a>.] 
+[Warning: <a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\MoreOnlyRAndomForest.m',141,33)">File: MoreOnlyRAndomForest.m Line: 141 Column: 33</a>
+The temporary variable 'windowed_labels' will be cleared at the beginning of each iteration of the
+parfor-loop. If 'windowed_labels' is used before it is set, a runtime error will occur. For more
+information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB, "Uninitialized Temporaries"</a>.] 
+[Warning: <a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\MoreOnlyRAndomForest.m',141,50)">File: MoreOnlyRAndomForest.m Line: 141 Column: 50</a>
+The temporary variable 'windowed_patient_ids' will be cleared at the beginning of each iteration of the
+parfor-loop. If 'windowed_patient_ids' is used before it is set, a runtime error will occur. For more
+information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB, "Uninitialized Temporaries"</a>.] 
+Starting Expanded Random Forest experiments at 10-Feb-2025 22:11:37
+
+Final Balanced Dataset: Class 0 = 639, Class 1 = 639
+
+Experiment 1: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 10
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('internal.stats.parseArgs', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\stats\+internal\+stats\parseArgs.m', 43)" style="font-weight:bold">internal.stats.parseArgs</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\stats\+internal\+stats\parseArgs.m',43,0)">line 43</a>)
+Wrong number of arguments.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('TreeBagger', 'C:\Program Files\MATLAB\R2024a\toolbox\stats\stats\@TreeBagger\TreeBagger.m', 618)" style="font-weight:bold">TreeBagger</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2024a\toolbox\stats\stats\@TreeBagger\TreeBagger.m',618,0)">line 618</a>)
+                = internal.stats.parseArgs(growTreeArgs,growTreeDefs,varargin{:});
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('MoreOnlyRAndomForest>trainRandomForestClassifier', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\MoreOnlyRAndomForest.m', 219)" style="font-weight:bold">MoreOnlyRAndomForest>trainRandomForestClassifier</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\MoreOnlyRAndomForest.m',219,0)">line 219</a>)
+    rfModel = TreeBagger(NTrees, X_train, y_train_cat, t, 'Method', 'classification', ...
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('MoreOnlyRAndomForest>runRFExperiment', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\MoreOnlyRAndomForest.m', 138)" style="font-weight:bold">MoreOnlyRAndomForest>runRFExperiment</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\MoreOnlyRAndomForest.m',138,0)">line 138</a>)
+    parfor i = 1:n_patients
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('MoreOnlyRAndomForest', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\MoreOnlyRAndomForest.m', 98)" style="font-weight:bold">MoreOnlyRAndomForest</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\MoreOnlyRAndomForest.m',98,0)">line 98</a>)
+                    result = runRFExperiment(nt, ml, st, useScreeningThreshold, infection_threshold, ...
+} 
+MoreOnlyRAndomForest
+[Warning: <a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\MoreOnlyRAndomForest.m',141,14)">File: MoreOnlyRAndomForest.m Line: 141 Column: 14</a>
+The temporary variable 'windowed_features' will be cleared at the beginning of each iteration of the
+parfor-loop. If 'windowed_features' is used before it is set, a runtime error will occur. For more
+information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB, "Uninitialized Temporaries"</a>.] 
+[Warning: <a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\MoreOnlyRAndomForest.m',141,33)">File: MoreOnlyRAndomForest.m Line: 141 Column: 33</a>
+The temporary variable 'windowed_labels' will be cleared at the beginning of each iteration of the
+parfor-loop. If 'windowed_labels' is used before it is set, a runtime error will occur. For more
+information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB, "Uninitialized Temporaries"</a>.] 
+[Warning: <a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\MoreOnlyRAndomForest.m',141,50)">File: MoreOnlyRAndomForest.m Line: 141 Column: 50</a>
+The temporary variable 'windowed_patient_ids' will be cleared at the beginning of each iteration of the
+parfor-loop. If 'windowed_patient_ids' is used before it is set, a runtime error will occur. For more
+information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB, "Uninitialized Temporaries"</a>.] 
+Starting Expanded Random Forest experiments at 10-Feb-2025 22:12:54
+
+Final Balanced Dataset: Class 0 = 639, Class 1 = 639
+
+Experiment 1: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.52 with Youden's J: 0.4782
+
+Experiment 2: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.76 with Youden's J: 0.4941
+
+Experiment 3: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.83 with Youden's J: 0.4672
+
+Experiment 4: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.52 with Youden's J: 0.4877
+
+Experiment 5: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.54 with Youden's J: 0.4642
+
+Experiment 6: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.90 with Youden's J: 0.4832
+
+Experiment 7: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.68 with Youden's J: 0.3936
+
+Experiment 8: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.79 with Youden's J: 0.4601
+
+Experiment 9: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.90 with Youden's J: 0.4032
+
+Experiment 10: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.54 with Youden's J: 0.4496
+
+Experiment 11: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.74 with Youden's J: 0.4712
+
+Experiment 12: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.77 with Youden's J: 0.4618
+
+Experiment 13: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.57 with Youden's J: 0.4224
+
+Experiment 14: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.63 with Youden's J: 0.4533
+
+Experiment 15: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.77 with Youden's J: 0.4586
+
+Experiment 16: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.68 with Youden's J: 0.4164
+
+Experiment 17: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.60 with Youden's J: 0.4170
+
+Experiment 18: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.81 with Youden's J: 0.4429
+
+Experiment 19: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.59 with Youden's J: 0.5142
+
+Experiment 20: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.69 with Youden's J: 0.4939
+
+Experiment 21: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.69 with Youden's J: 0.4810
+
+Experiment 22: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.56 with Youden's J: 0.4470
+
+Experiment 23: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.50 with Youden's J: 0.4325
+
+Experiment 24: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.58 with Youden's J: 0.4027
+
+Experiment 25: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.70 with Youden's J: 0.3881
+
+Experiment 26: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.84 with Youden's J: 0.4441
+
+Experiment 27: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.88 with Youden's J: 0.4432
+
+Experiment 28: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.71 with Youden's J: 0.4403
+
+Experiment 29: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.70 with Youden's J: 0.4721
+
+Experiment 30: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.76 with Youden's J: 0.4769
+
+Experiment 31: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.65 with Youden's J: 0.4136
+
+Experiment 32: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.76 with Youden's J: 0.4269
+
+Experiment 33: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.78 with Youden's J: 0.4667
+
+Experiment 34: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.63 with Youden's J: 0.4444
+
+Experiment 35: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.61 with Youden's J: 0.4342
+
+Experiment 36: NTrees = 50, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.53 with Youden's J: 0.4957
+
+Experiment 37: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.58 with Youden's J: 0.4647
+
+Experiment 38: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.57 with Youden's J: 0.4810
+
+Experiment 39: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.55 with Youden's J: 0.4757
+
+Experiment 40: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.53 with Youden's J: 0.4577
+
+Experiment 41: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.74 with Youden's J: 0.4338
+
+Experiment 42: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.66 with Youden's J: 0.3921
+
+Experiment 43: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.70 with Youden's J: 0.4416
+
+Experiment 44: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.81 with Youden's J: 0.4312
+
+Experiment 45: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.91 with Youden's J: 0.3743
+
+Experiment 46: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.58 with Youden's J: 0.4238
+
+Experiment 47: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.53 with Youden's J: 0.4550
+
+Experiment 48: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.72 with Youden's J: 0.4704
+
+Experiment 49: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.59 with Youden's J: 0.4496
+
+Experiment 50: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.83 with Youden's J: 0.4137
+
+Experiment 51: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.77 with Youden's J: 0.4484
+
+Experiment 52: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.68 with Youden's J: 0.4170
+
+Experiment 53: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.79 with Youden's J: 0.4801
+
+Experiment 54: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.84 with Youden's J: 0.4129
+
+Experiment 55: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.55 with Youden's J: 0.4607
+
+Experiment 56: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.74 with Youden's J: 0.4838
+
+Experiment 57: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.58 with Youden's J: 0.4733
+
+Experiment 58: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.53 with Youden's J: 0.4727
+
+Experiment 59: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.80 with Youden's J: 0.4120
+
+Experiment 60: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.52 with Youden's J: 0.4439
+
+Experiment 61: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.60 with Youden's J: 0.4219
+
+Experiment 62: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.67 with Youden's J: 0.4276
+
+Experiment 63: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.88 with Youden's J: 0.3892
+
+Experiment 64: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.53 with Youden's J: 0.4645
+
+Experiment 65: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.59 with Youden's J: 0.4144
+
+Experiment 66: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.52 with Youden's J: 0.4534
+
+Experiment 67: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.75 with Youden's J: 0.4252
+
+Experiment 68: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.64 with Youden's J: 0.4004
+
+Experiment 69: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.75 with Youden's J: 0.4798
+
+Experiment 70: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.71 with Youden's J: 0.4436
+
+Experiment 71: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.60 with Youden's J: 0.4164
+
+Experiment 72: NTrees = 50, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.58 with Youden's J: 0.4790
+
+Experiment 73: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.53 with Youden's J: 0.4373
+
+Experiment 74: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.78 with Youden's J: 0.3923
+
+Experiment 75: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.55 with Youden's J: 0.4399
+
+Experiment 76: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.56 with Youden's J: 0.4444
+
+Experiment 77: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.59 with Youden's J: 0.4582
+
+Experiment 78: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.61 with Youden's J: 0.4193
+
+Experiment 79: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.63 with Youden's J: 0.3993
+
+Experiment 80: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.85 with Youden's J: 0.3857
+
+Experiment 81: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.79 with Youden's J: 0.4418
+
+Experiment 82: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.62 with Youden's J: 0.4835
+
+Experiment 83: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.50 with Youden's J: 0.4620
+
+Experiment 84: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.62 with Youden's J: 0.4368
+
+Experiment 85: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.60 with Youden's J: 0.3830
+
+Experiment 86: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.63 with Youden's J: 0.5236
+
+Experiment 87: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.64 with Youden's J: 0.4118
+
+Experiment 88: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.72 with Youden's J: 0.4084
+
+Experiment 89: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.80 with Youden's J: 0.4209
+
+Experiment 90: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.60 with Youden's J: 0.4571
+
+Experiment 91: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.83 with Youden's J: 0.3840
+
+Experiment 92: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.57 with Youden's J: 0.4654
+
+Experiment 93: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.57 with Youden's J: 0.4688
+
+Experiment 94: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.84 with Youden's J: 0.3771
+
+Experiment 95: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.63 with Youden's J: 0.4464
+
+Experiment 96: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.73 with Youden's J: 0.5087
+
+Experiment 97: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.66 with Youden's J: 0.4238
+
+Experiment 98: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.71 with Youden's J: 0.4036
+
+Experiment 99: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.79 with Youden's J: 0.4100
+
+Experiment 100: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.71 with Youden's J: 0.3929
+
+Experiment 101: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.57 with Youden's J: 0.4470
+
+Experiment 102: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.61 with Youden's J: 0.4470
+
+Experiment 103: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.57 with Youden's J: 0.4699
+
+Experiment 104: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.68 with Youden's J: 0.4741
+
+Experiment 105: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.66 with Youden's J: 0.4359
+
+Experiment 106: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.89 with Youden's J: 0.3546
+
+Experiment 107: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.83 with Youden's J: 0.4066
+
+Experiment 108: NTrees = 50, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.65 with Youden's J: 0.4782
+
+Experiment 109: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.52 with Youden's J: 0.4788
+
+Experiment 110: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.61 with Youden's J: 0.4233
+
+Experiment 111: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.74 with Youden's J: 0.4812
+
+Experiment 112: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.59 with Youden's J: 0.4290
+
+Experiment 113: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.75 with Youden's J: 0.4698
+
+Experiment 114: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.78 with Youden's J: 0.4724
+
+Experiment 115: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.80 with Youden's J: 0.3875
+
+Experiment 116: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.64 with Youden's J: 0.4050
+
+Experiment 117: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.83 with Youden's J: 0.4524
+
+Experiment 118: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.57 with Youden's J: 0.4808
+
+Experiment 119: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.55 with Youden's J: 0.4919
+
+Experiment 120: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.74 with Youden's J: 0.4849
+
+Experiment 121: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.55 with Youden's J: 0.4444
+
+Experiment 122: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.73 with Youden's J: 0.4652
+
+Experiment 123: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.80 with Youden's J: 0.4355
+
+Experiment 124: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.63 with Youden's J: 0.4156
+
+Experiment 125: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.56 with Youden's J: 0.4387
+
+Experiment 126: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.85 with Youden's J: 0.4355
+
+Experiment 127: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.63 with Youden's J: 0.4625
+
+Experiment 128: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.53 with Youden's J: 0.4628
+
+Experiment 129: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.69 with Youden's J: 0.4798
+
+Experiment 130: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.54 with Youden's J: 0.4256
+
+Experiment 131: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.72 with Youden's J: 0.4804
+
+Experiment 132: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.81 with Youden's J: 0.4664
+
+Experiment 133: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.72 with Youden's J: 0.3561
+
+Experiment 134: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.64 with Youden's J: 0.4090
+
+Experiment 135: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.86 with Youden's J: 0.4292
+
+Experiment 136: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.51 with Youden's J: 0.4662
+
+Experiment 137: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.73 with Youden's J: 0.4326
+
+Experiment 138: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.68 with Youden's J: 0.4747
+
+Experiment 139: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.55 with Youden's J: 0.4444
+
+Experiment 140: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.77 with Youden's J: 0.4706
+
+Experiment 141: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.69 with Youden's J: 0.4784
+
+Experiment 142: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.61 with Youden's J: 0.4279
+
+Experiment 143: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.80 with Youden's J: 0.4201
+
+Experiment 144: NTrees = 100, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.55 with Youden's J: 0.4436
+
+Experiment 145: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.55 with Youden's J: 0.4891
+
+Experiment 146: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.60 with Youden's J: 0.4519
+
+Experiment 147: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.72 with Youden's J: 0.4647
+
+Experiment 148: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.78 with Youden's J: 0.4183
+
+Experiment 149: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.80 with Youden's J: 0.4446
+
+Experiment 150: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.64 with Youden's J: 0.4150
+
+Experiment 151: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.63 with Youden's J: 0.4176
+
+Experiment 152: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.62 with Youden's J: 0.4001
+
+Experiment 153: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.62 with Youden's J: 0.4121
+
+Experiment 154: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.58 with Youden's J: 0.3913
+
+Experiment 155: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.55 with Youden's J: 0.4633
+
+Experiment 156: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.79 with Youden's J: 0.4501
+
+Experiment 157: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.62 with Youden's J: 0.3898
+
+Experiment 158: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.70 with Youden's J: 0.4772
+
+Experiment 159: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.82 with Youden's J: 0.4275
+
+Experiment 160: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.63 with Youden's J: 0.4459
+
+Experiment 161: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.86 with Youden's J: 0.4332
+
+Experiment 162: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.86 with Youden's J: 0.3992
+
+Experiment 163: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.57 with Youden's J: 0.4736
+
+Experiment 164: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.62 with Youden's J: 0.4307
+
+Experiment 165: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.55 with Youden's J: 0.4788
+
+Experiment 166: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.52 with Youden's J: 0.4790
+
+Experiment 167: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.81 with Youden's J: 0.4078
+
+Experiment 168: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.77 with Youden's J: 0.4535
+
+Experiment 169: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.68 with Youden's J: 0.4447
+
+Experiment 170: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.61 with Youden's J: 0.4116
+
+Experiment 171: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.87 with Youden's J: 0.4049
+
+Experiment 172: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.56 with Youden's J: 0.4899
+
+Experiment 173: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.56 with Youden's J: 0.5062
+
+Experiment 174: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.64 with Youden's J: 0.4953
+
+Experiment 175: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.48 with Youden's J: 0.4805
+
+Experiment 176: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.53 with Youden's J: 0.4459
+
+Experiment 177: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.70 with Youden's J: 0.4804
+
+Experiment 178: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.69 with Youden's J: 0.3830
+
+Experiment 179: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.87 with Youden's J: 0.4132
+
+Experiment 180: NTrees = 100, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.81 with Youden's J: 0.4509
+
+Experiment 181: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.56 with Youden's J: 0.4788
+
+Experiment 182: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.56 with Youden's J: 0.4762
+
+Experiment 183: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.71 with Youden's J: 0.4861
+
+Experiment 184: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.56 with Youden's J: 0.4488
+
+Experiment 185: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.75 with Youden's J: 0.4724
+
+Experiment 186: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.56 with Youden's J: 0.4554
+
+Experiment 187: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.66 with Youden's J: 0.4433
+
+Experiment 188: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.72 with Youden's J: 0.4204
+
+Experiment 189: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.70 with Youden's J: 0.4344
+
+Experiment 190: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.51 with Youden's J: 0.4562
+
+Experiment 191: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.62 with Youden's J: 0.5056
+
+Experiment 192: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.62 with Youden's J: 0.5068
+
+Experiment 193: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.62 with Youden's J: 0.3830
+
+Experiment 194: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.58 with Youden's J: 0.4648
+
+Experiment 195: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.61 with Youden's J: 0.4413
+
+Experiment 196: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.72 with Youden's J: 0.3630
+
+Experiment 197: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.68 with Youden's J: 0.4061
+
+Experiment 198: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.80 with Youden's J: 0.4392
+
+Experiment 199: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.72 with Youden's J: 0.3709
+
+Experiment 200: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.66 with Youden's J: 0.4810
+
+Experiment 201: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.63 with Youden's J: 0.4827
+
+Experiment 202: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.61 with Youden's J: 0.4522
+
+Experiment 203: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.58 with Youden's J: 0.4290
+
+Experiment 204: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.75 with Youden's J: 0.4384
+
+Experiment 205: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.68 with Youden's J: 0.4364
+
+Experiment 206: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.75 with Youden's J: 0.4715
+
+Experiment 207: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.67 with Youden's J: 0.4307
+
+Experiment 208: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.54 with Youden's J: 0.4737
+
+Experiment 209: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.56 with Youden's J: 0.4622
+
+Experiment 210: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.58 with Youden's J: 0.4522
+
+Experiment 211: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.55 with Youden's J: 0.4359
+
+Experiment 212: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.57 with Youden's J: 0.4388
+
+Experiment 213: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.57 with Youden's J: 0.4779
+
+Experiment 214: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.67 with Youden's J: 0.3998
+
+Experiment 215: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.70 with Youden's J: 0.4416
+
+Experiment 216: NTrees = 100, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.71 with Youden's J: 0.4276
+
+Experiment 217: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.49 with Youden's J: 0.4742
+
+Experiment 218: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.74 with Youden's J: 0.4667
+
+Experiment 219: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.75 with Youden's J: 0.4735
+
+Experiment 220: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.55 with Youden's J: 0.4550
+
+Experiment 221: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.53 with Youden's J: 0.4573
+
+Experiment 222: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.75 with Youden's J: 0.4672
+
+Experiment 223: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.67 with Youden's J: 0.4176
+
+Experiment 224: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.60 with Youden's J: 0.4127
+
+Experiment 225: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.57 with Youden's J: 0.4347
+
+Experiment 226: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.51 with Youden's J: 0.4660
+
+Experiment 227: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.55 with Youden's J: 0.4502
+
+Experiment 228: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.77 with Youden's J: 0.4858
+
+Experiment 229: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.55 with Youden's J: 0.4362
+
+Experiment 230: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.80 with Youden's J: 0.4198
+
+Experiment 231: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.75 with Youden's J: 0.4761
+
+Experiment 232: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.60 with Youden's J: 0.4259
+
+Experiment 233: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.64 with Youden's J: 0.4059
+
+Experiment 234: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.82 with Youden's J: 0.4586
+
+Experiment 235: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.55 with Youden's J: 0.4657
+
+Experiment 236: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.72 with Youden's J: 0.4589
+
+Experiment 237: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.73 with Youden's J: 0.4741
+
+Experiment 238: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.56 with Youden's J: 0.4256
+
+Experiment 239: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.79 with Youden's J: 0.4298
+
+Experiment 240: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.75 with Youden's J: 0.4672
+
+Experiment 241: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.63 with Youden's J: 0.4187
+
+Experiment 242: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.87 with Youden's J: 0.4032
+
+Experiment 243: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.57 with Youden's J: 0.4153
+
+Experiment 244: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.54 with Youden's J: 0.4599
+
+Experiment 245: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.68 with Youden's J: 0.4804
+
+Experiment 246: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.70 with Youden's J: 0.4872
+
+Experiment 247: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.65 with Youden's J: 0.3798
+
+Experiment 248: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.55 with Youden's J: 0.4373
+
+Experiment 249: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.81 with Youden's J: 0.4549
+
+Experiment 250: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.67 with Youden's J: 0.3936
+
+Experiment 251: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.87 with Youden's J: 0.4129
+
+Experiment 252: NTrees = 200, MinLeafSize = 1, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.83 with Youden's J: 0.4649
+
+Experiment 253: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.57 with Youden's J: 0.4805
+
+Experiment 254: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.69 with Youden's J: 0.4672
+
+Experiment 255: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.70 with Youden's J: 0.4798
+
+Experiment 256: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.53 with Youden's J: 0.4788
+
+Experiment 257: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.55 with Youden's J: 0.4130
+
+Experiment 258: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.79 with Youden's J: 0.4504
+
+Experiment 259: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.66 with Youden's J: 0.4356
+
+Experiment 260: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.86 with Youden's J: 0.4060
+
+Experiment 261: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.92 with Youden's J: 0.4123
+
+Experiment 262: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.49 with Youden's J: 0.4597
+
+Experiment 263: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.62 with Youden's J: 0.4496
+
+Experiment 264: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.61 with Youden's J: 0.4514
+
+Experiment 265: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.54 with Youden's J: 0.4757
+
+Experiment 266: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.81 with Youden's J: 0.4218
+
+Experiment 267: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.53 with Youden's J: 0.4547
+
+Experiment 268: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.72 with Youden's J: 0.3901
+
+Experiment 269: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.84 with Youden's J: 0.4192
+
+Experiment 270: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.61 with Youden's J: 0.4184
+
+Experiment 271: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.61 with Youden's J: 0.4356
+
+Experiment 272: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.62 with Youden's J: 0.4533
+
+Experiment 273: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.55 with Youden's J: 0.4288
+
+Experiment 274: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.61 with Youden's J: 0.4250
+
+Experiment 275: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.56 with Youden's J: 0.4654
+
+Experiment 276: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.72 with Youden's J: 0.4709
+
+Experiment 277: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.65 with Youden's J: 0.4201
+
+Experiment 278: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.60 with Youden's J: 0.4284
+
+Experiment 279: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.63 with Youden's J: 0.4084
+
+Experiment 280: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.55 with Youden's J: 0.4865
+
+Experiment 281: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.61 with Youden's J: 0.4793
+
+Experiment 282: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.71 with Youden's J: 0.4798
+
+Experiment 283: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.54 with Youden's J: 0.4539
+
+Experiment 284: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.76 with Youden's J: 0.4364
+
+Experiment 285: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.58 with Youden's J: 0.4161
+
+Experiment 286: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.67 with Youden's J: 0.4081
+
+Experiment 287: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.84 with Youden's J: 0.4155
+
+Experiment 288: NTrees = 200, MinLeafSize = 5, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.61 with Youden's J: 0.4064
+
+Experiment 289: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.55 with Youden's J: 0.4762
+
+Experiment 290: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.54 with Youden's J: 0.4602
+
+Experiment 291: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.58 with Youden's J: 0.4762
+
+Experiment 292: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.58 with Youden's J: 0.4696
+
+Experiment 293: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.63 with Youden's J: 0.4161
+
+Experiment 294: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.57 with Youden's J: 0.4679
+
+Experiment 295: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.65 with Youden's J: 0.4413
+
+Experiment 296: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.63 with Youden's J: 0.4253
+
+Experiment 297: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.20, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.66 with Youden's J: 0.4330
+
+Experiment 298: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.56 with Youden's J: 0.4685
+
+Experiment 299: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.58 with Youden's J: 0.4814
+
+Experiment 300: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.58 with Youden's J: 0.4808
+
+Experiment 301: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.52 with Youden's J: 0.4665
+
+Experiment 302: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.56 with Youden's J: 0.4711
+
+Experiment 303: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.60 with Youden's J: 0.4342
+
+Experiment 304: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.63 with Youden's J: 0.4413
+
+Experiment 305: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.84 with Youden's J: 0.4123
+
+Experiment 306: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.30, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.70 with Youden's J: 0.4164
+
+Experiment 307: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.56 with Youden's J: 0.4648
+
+Experiment 308: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.59 with Youden's J: 0.4839
+
+Experiment 309: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.60 with Youden's J: 0.4808
+
+Experiment 310: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.56 with Youden's J: 0.4794
+
+Experiment 311: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.59 with Youden's J: 0.4470
+
+Experiment 312: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.55 with Youden's J: 0.4725
+
+Experiment 313: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.66 with Youden's J: 0.4238
+
+Experiment 314: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.63 with Youden's J: 0.4310
+
+Experiment 315: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.40, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.63 with Youden's J: 0.4367
+
+Experiment 316: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 10
+Optimized threshold: 0.57 with Youden's J: 0.4613
+
+Experiment 317: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 20
+Optimized threshold: 0.68 with Youden's J: 0.4904
+
+Experiment 318: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 3, MaxNumSplits = 50
+Optimized threshold: 0.57 with Youden's J: 0.4788
+
+Experiment 319: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 10
+Optimized threshold: 0.59 with Youden's J: 0.4376
+
+Experiment 320: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 20
+Optimized threshold: 0.59 with Youden's J: 0.4470
+
+Experiment 321: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 4, MaxNumSplits = 50
+Optimized threshold: 0.74 with Youden's J: 0.4321
+
+Experiment 322: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 10
+Optimized threshold: 0.69 with Youden's J: 0.4233
+
+Experiment 323: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 20
+Optimized threshold: 0.66 with Youden's J: 0.4350
+
+Experiment 324: NTrees = 200, MinLeafSize = 10, ScreeningThreshold = 0.50, NumPredictors = 7, MaxNumSplits = 50
+Optimized threshold: 0.83 with Youden's J: 0.4103
+
+All experiment results exported to rf_expanded_experiment_results.csv
