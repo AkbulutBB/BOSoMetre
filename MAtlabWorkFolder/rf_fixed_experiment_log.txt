@@ -1,0 +1,17 @@
+Starting Fixed Random Forest experiment with settings from Experiment 1483 at 19-Feb-2025 23:16:57
+
+Final Balanced Dataset: Class 0 = 690, Class 1 = 690
+Optimized threshold: 0.54 with Youden's J: 0.4604
+
+Final Results:
+Seed: 42
+NTrees: 50, MinLeafSize: 1, ScreeningThreshold: 0.46, NumPredictors: 3, MaxNumSplits: 10
+Accuracy: 70.45%
+Sensitivity: 72.38%
+Specificity: 68.84%
+OptimizedThreshold: 0.54, UsedThreshold: 0.46
+F1 (Clean): 0.7179, F1 (Infected): 0.6898
+Confusion Matrix:
+   285   129
+    95   249
+

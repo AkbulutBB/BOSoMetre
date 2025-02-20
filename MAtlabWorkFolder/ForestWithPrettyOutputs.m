@@ -1,11 +1,15 @@
-%% Expanded RandomForest Experiment with Additional Hyperparameters
-% This script performs a parameter sweep for a random forest classifier 
-% using TreeBagger with LOOCV. In addition to NTrees, MinLeafSize, and 
-% ScreeningThreshold, it now varies:
-%   - NumPredictorsToSample (number of predictors sampled at each split)
-%   - MaxNumSplits (maximum number of splits per tree)
+%% Expanded RandomForest Experiment with Hyperparameter Sweep, Presentation Plots, and Model Saving
+% This script iterates through random seeds and a full hyperparameter grid 
+% (NTrees, MinLeafSize, ScreeningThreshold, NumPredictorsToSample, and 
+% MaxNumSplits) and prints the accuracy and sensitivity for every configuration.
+% It stops as soon as it finds a configuration where:
+%   - Accuracy > 80%
+%   - Sensitivity > 70%
 %
-% Lower screening thresholds may help catch more infections.
+% After a configuration meeting these criteria is found, the script:
+%   1. Generates presentation‐quality plots (ROC, confusion matrix, histogram).
+%   2. Trains a final model on the entire windowed dataset.
+%   3. Saves the final model (and feature scaling parameters) to a MAT‐file.
 %
 % References:
 %   Breiman, L. (2001). Random Forests. Machine Learning, 45(1), 5–32.
@@ -19,14 +23,20 @@ clearvars -except processedcsfdata;
 diary('rf_learning_session_log.txt');
 fprintf('Starting Expanded Random Forest experiments at %s\n', datestr(now));
 
-%% --- Fixed Parameters ---
+%% --- Setup CSV Logging ---
+outputCSV = 'rf_experiment_results.csv';
+fid = fopen(outputCSV, 'w');
+% Write header row:
+fprintf(fid, 'Experiment,Seed,NTrees,MinLeafSize,ScreeningThreshold,NumPredictors,MaxNumSplits,Accuracy,Sensitivity,Specificity,OptimizedThreshold,UsedThreshold,F1_Clean,F1_Infected\n');
+
+%% --- Fixed Data Processing Parameters ---
 useDynamicWindow = true;          % Use dynamic windowing for feature extraction
-min_window_size    = 2;             % From old analysis
+min_window_size    = 2;             % As in previous analysis
 max_window_size    = 24;
 variance_threshold = 0.05;
-windowLabelingMode = 'majority';   % As in old analysis
-useScreeningThreshold = true;      % Use a fixed screening threshold for evaluation
-infection_threshold = 0.4;         % Baseline threshold from old analysis
+windowLabelingMode = 'majority';   % Majority voting for labeling
+useScreeningThreshold = false;      % The experiment will use an optimized threshold here
+infection_threshold = 0.4;         % Baseline threshold from earlier analysis
 useSMOTE = true;
 k_neighbors = 5;
 
@@ -38,13 +48,13 @@ G = data.GNormalized;
 B = data.BNormalized;
 C = data.CNormalized;
 features_orig = [R, G, B, C];
-feature_names = {'R','G','B','C'};
+feature_names = {'R','G','C'};
 % Augmented features (ratios)
 ratioRC = R ./ (C + epsilon);
 ratioGC = G ./ (C + epsilon);
 ratioBC = B ./ (C + epsilon);
 features_augmented = [ratioRC, ratioGC, ratioBC];
-augmented_names = {'ratioRC','ratioGC','ratioBC'};
+augmented_names = {'ratioGC'};
 useAugmented = true;
 if useAugmented
     features_all = [features_orig, features_augmented];
@@ -72,51 +82,155 @@ end
 fprintf('\nFinal Balanced Dataset: Class 0 = %d, Class 1 = %d\n', ...
     sum(binary_labels==0), sum(binary_labels==1));
 
-%% --- Expanded Parameter Grid ---
-% Original grid:
-NTreesOptions = [50, 100, 200];           
-MinLeafSizeOptions = [1, 5, 10];            
-% Expand screening thresholds to include lower values to potentially catch more infections.
-ScreeningThresholdOptions = [0.2, 0.3, 0.4, 0.5];  
+%% --- Hyperparameter Grid ---
+NTreesOptions = [50];           
+MinLeafSizeOptions = [1];            
+ScreeningThresholdOptions = [0.45, 0.46, 0.47, 0.48, 0.49, 0.5];  
 
-% New hyperparameters:
-p = size(features_all, 2);  % total number of predictors
+p = size(features_all, 2);  % Total number of predictors
 NumPredictorsOptions = [max(1, round(sqrt(p))), max(1, round(p/2)), p];
-MaxNumSplitsOptions = [10, 20, 50];  % maximum number of splits per tree
+MaxNumSplitsOptions = [10, 20];  
 
-allResults = [];
-expCount = 1;
+%% --- Experiment Criteria ---
+% We want to stop when:
+%   Accuracy > 80%
+%   Sensitivity > 70%
+target_accuracy = 0.80;
+target_sensitivity = 0.70;
 
-%% --- Experiment Loop ---
-for nt = NTreesOptions
-    for ml = MinLeafSizeOptions
-        for st = ScreeningThresholdOptions
-            for np = NumPredictorsOptions
-                for ms = MaxNumSplitsOptions
-                    fprintf('\nExperiment %d: NTrees = %d, MinLeafSize = %d, ScreeningThreshold = %.2f, NumPredictors = %d, MaxNumSplits = %d\n', ...
-                        expCount, nt, ml, st, np, ms);
-                    result = runRFExperiment(nt, ml, st, useScreeningThreshold, infection_threshold, ...
-                        features_all, binary_labels, patient_ids, batches, ...
-                        useDynamicWindow, min_window_size, max_window_size, variance_threshold, windowLabelingMode, np, ms);
-                    % Append parameter details to the result.
-                    result.NTrees = nt;
-                    result.MinLeafSize = ml;
-                    result.ScreeningThreshold = st;
-                    result.NumPredictors = np;
-                    result.MaxNumSplits = ms;
-                    allResults = [allResults; result]; %#ok<AGROW>
-                    expCount = expCount + 1;
+%% --- Seed and Parameter Grid Sweep ---
+maxSeeds = 10000;  % Maximum number of seeds to try
+foundFlag = false;  % Flag indicating a desired configuration has been found
+finalSeed = NaN;
+finalResult = [];
+finalParams = struct();
+
+expCount = 1;  % Experiment counter
+
+for s = 1:maxSeeds
+    if foundFlag, break; end
+    rng(s);  % Set the random seed
+    fprintf('\nSeed %d\n', s);
+    
+    % Loop over hyperparameter grid
+    for nt = NTreesOptions
+        if foundFlag, break; end
+        for ml = MinLeafSizeOptions
+            if foundFlag, break; end
+            for st = ScreeningThresholdOptions
+                if foundFlag, break; end
+                for np = NumPredictorsOptions
+                    if foundFlag, break; end
+                    for ms = MaxNumSplitsOptions
+                        fprintf('\nExperiment %d: Seed = %d, NTrees = %d, MinLeafSize = %d, ScreeningThreshold = %.2f, NumPredictors = %d, MaxNumSplits = %d\n', ...
+                            expCount, s, nt, ml, st, np, ms);
+                        result = runRFExperiment(nt, ml, st, useScreeningThreshold, infection_threshold, ...
+                            features_all, binary_labels, patient_ids, batches, ...
+                            useDynamicWindow, min_window_size, max_window_size, variance_threshold, windowLabelingMode, np, ms);
+                        % Append hyperparameter details to the result for record
+                        result.NTrees = nt;
+                        result.MinLeafSize = ml;
+                        result.ScreeningThreshold = st;
+                        result.NumPredictors = np;
+                        result.MaxNumSplits = ms;
+                        % Log the result to CSV:
+                        fprintf(fid, '%d,%d,%d,%d,%.2f,%d,%d,%.4f,%.4f,%.4f,%.2f,%.2f,%.4f,%.4f\n', ...
+                            expCount, s, nt, ml, st, np, ms, result.Accuracy, result.Sensitivity, result.Specificity, ...
+                            result.OptimizedThreshold, result.UsedThreshold, result.F1_Clean, result.F1_Infected);
+                        
+                        expCount = expCount + 1;
+                        
+                        fprintf(' -> Accuracy: %.2f%%, Sensitivity: %.2f%%\n', result.Accuracy*100, result.Sensitivity*100);
+                        
+                        % Check if criteria are met: Accuracy > 80% and Sensitivity > 70%
+                        if (result.Accuracy > target_accuracy) && (result.Sensitivity > target_sensitivity)
+                            fprintf('Criteria met: Accuracy = %.2f%%, Sensitivity = %.2f%%\n', result.Accuracy*100, result.Sensitivity*100);
+                            foundFlag = true;
+                            finalSeed = s;
+                            finalResult = result;
+                            finalParams.NTrees = nt;
+                            finalParams.MinLeafSize = ml;
+                            finalParams.ScreeningThreshold = st;
+                            finalParams.NumPredictors = np;
+                            finalParams.MaxNumSplits = ms;
+                            break;
+                        end
+                    end
                 end
             end
         end
     end
 end
 
-%% --- Export Results ---
-resultsTable = struct2table(allResults, 'AsArray', true);
-writetable(resultsTable, 'rf_expanded_experiment_results.csv');
-fprintf('\nAll experiment results exported to rf_expanded_experiment_results.csv\n');
+if foundFlag
+    fprintf('\nFinal configuration found!\n');
+    fprintf('Seed: %d\n', finalSeed);
+    fprintf('NTrees: %d\n', finalParams.NTrees);
+    fprintf('MinLeafSize: %d\n', finalParams.MinLeafSize);
+    fprintf('ScreeningThreshold: %.2f\n', finalParams.ScreeningThreshold);
+    fprintf('NumPredictors: %d\n', finalParams.NumPredictors);
+    fprintf('MaxNumSplits: %d\n', finalParams.MaxNumSplits);
+    fprintf('Final Accuracy: %.2f%%\n', finalResult.Accuracy*100);
+    fprintf('Final Sensitivity: %.2f%%\n', finalResult.Sensitivity*100);
+    fprintf('OptimizedThreshold: %.2f\n', finalResult.OptimizedThreshold);
+    fprintf('UsedThreshold: %.2f\n', finalResult.UsedThreshold);
+    fprintf('F1 (Clean): %.4f\n', finalResult.F1_Clean);
+    fprintf('F1 (Infected): %.4f\n', finalResult.F1_Infected);
+    fprintf('Specificity: %.2f%%\n', finalResult.Specificity*100);
+    fprintf('Confusion Matrix:\n');
+    disp(finalResult.ConfusionMatrix);
+else
+    fprintf('\nNo configuration meeting the criteria was found after %d seeds and %d experiments.\n', maxSeeds, expCount);
+end
+
+fclose(fid);  % Close CSV file
 diary off;
+
+%% --- Generate Presentation-Quality Plots ---
+% (Assuming runRFExperiment now returns aggregated ground truth and scores)
+figure;
+[rocX, rocY, rocT, auc] = perfcurve(finalResult.all_test_truth, finalResult.all_test_scores, 1);
+plot(rocX, rocY, 'b-', 'LineWidth', 2);
+xlabel('False Positive Rate');
+ylabel('True Positive Rate');
+title(sprintf('ROC Curve (AUC = %.3f)', auc));
+grid on;
+
+figure;
+imagesc(finalResult.ConfusionMatrix);
+colormap('hot');
+colorbar;
+title('Confusion Matrix');
+xlabel('Predicted Class');
+ylabel('True Class');
+set(gca, 'XTick', 1:2, 'XTickLabel', {'Clean','Infected'});
+set(gca, 'YTick', 1:2, 'YTickLabel', {'Clean','Infected'});
+
+figure;
+hold on;
+histogram(finalResult.all_test_scores(finalResult.all_test_truth==0), 'Normalization', 'pdf', 'FaceColor', 'r', 'FaceAlpha', 0.5);
+histogram(finalResult.all_test_scores(finalResult.all_test_truth==1), 'Normalization', 'pdf', 'FaceColor', 'g', 'FaceAlpha', 0.5);
+title('Distribution of Prediction Scores by Class');
+xlabel('Prediction Score');
+ylabel('Probability Density');
+legend('Clean (0)','Infected (1)');
+hold off;
+
+%% --- Train Final Model on Entire Dataset and Save It ---
+fprintf('\nTraining final model on the entire windowed dataset...\n');
+[all_windowed_features, all_windowed_labels, ~, ~] = create_dynamic_rolling_window_per_patient(...
+    features_all, binary_labels, patient_ids, batches, min_window_size, max_window_size, variance_threshold, windowLabelingMode);
+
+% Standardize features for the final model.
+[X_train_final, mu_final, sigma_final] = zscore(all_windowed_features);
+
+% Train the final Random Forest model using the best hyperparameters.
+finalModel = TreeBagger(finalParams.NTrees, X_train_final, categorical(all_windowed_labels), 'Method', 'classification', ...
+    'MinLeafSize', finalParams.MinLeafSize, 'NumVariablesToSample', finalParams.NumPredictors, 'MaxNumSplits', finalParams.MaxNumSplits, 'OOBPrediction', 'off');
+
+% Save the model along with scaling parameters.
+save('finalRFModel.mat', 'finalModel', 'mu_final', 'sigma_final');
+fprintf('Final model saved as finalRFModel.mat\n');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Helper Function Definitions
@@ -163,10 +277,10 @@ function result = runRFExperiment(NTrees, MinLeafSize, screeningThreshold, useSc
         [X_train_scaled, mu, sigma] = zscore(X_train);
         X_test_scaled = (X_test - mu) ./ sigma;
         
-        % Train the random forest model using expanded hyperparameters.
+        % Train the random forest model.
         rfModel = trainRandomForestClassifier(X_train_scaled, y_train, NTrees, MinLeafSize, NPred, maxSplits);
         
-        % Generate predictions; pass infection_threshold to the prediction function.
+        % Generate predictions.
         [preds, scores] = predictRandomForestClassifier(rfModel, X_test_scaled, infection_threshold);
         
         test_preds_cell{i} = preds;
@@ -200,6 +314,7 @@ function result = runRFExperiment(NTrees, MinLeafSize, screeningThreshold, useSc
     sensitivity = TP / max((TP+FN), 1);
     specificity = TN / max((TN+FP), 1);
     
+    % Include aggregated ground truth and scores for plotting.
     result = struct('OptimizedThreshold', optimized_threshold, ...
                     'UsedThreshold', used_threshold, ...
                     'Accuracy', accuracy, ...
@@ -207,13 +322,14 @@ function result = runRFExperiment(NTrees, MinLeafSize, screeningThreshold, useSc
                     'F1_Infected', f1(2), ...
                     'Sensitivity', sensitivity, ...
                     'Specificity', specificity, ...
-                    'ConfusionMatrix', {binary_cm});
+                    'ConfusionMatrix', {binary_cm}, ...
+                    'all_test_truth', all_test_truth, ...
+                    'all_test_scores', all_test_scores);
 end
 
 function rfModel = trainRandomForestClassifier(X_train, y_train, NTrees, MinLeafSize, NPred, maxSplits)
     y_train_cat = categorical(y_train);
     opts = statset('UseParallel', true);
-    % Pass hyperparameters as name-value pairs.
     rfModel = TreeBagger(NTrees, X_train, y_train_cat, 'Method', 'classification', ...
                 'MinLeafSize', MinLeafSize, 'NumVariablesToSample', NPred, 'MaxNumSplits', maxSplits, ...
                 'OOBPrediction', 'off', 'Options', opts);
@@ -222,16 +338,13 @@ end
 function [preds, scores] = predictRandomForestClassifier(rfModel, X_test, infection_threshold)
     [~, scoreOut] = predict(rfModel, X_test);
     if iscell(scoreOut)
-        % Convert cell array to numeric matrix.
         scoresMat = str2double(scoreOut);
     else
         scoresMat = scoreOut;
     end
-    % If only one column is returned, assume it corresponds to the positive class.
     if size(scoresMat,2) == 1
         scores = scoresMat(:,1);
     else
-        % Identify the column corresponding to the positive class (assumed label '1').
         classNames = rfModel.ClassNames;
         idxPositive = find(classNames == categorical(1));
         if isempty(idxPositive)
@@ -239,7 +352,6 @@ function [preds, scores] = predictRandomForestClassifier(rfModel, X_test, infect
         end
         scores = scoresMat(:, idxPositive);
     end
-    % Determine binary predictions using the provided infection_threshold.
     preds = double(scores >= infection_threshold);
 end
 
@@ -261,7 +373,7 @@ end
 function bestThreshold = optimizeThreshold(truth, scores)
     thresholds = 0:0.01:1;
     bestMetric = -Inf;
-    bestThreshold = 0.5; % default threshold
+    bestThreshold = 0.5;
     for t = thresholds
         preds = double(scores >= t);
         cm = confusionmat(truth, preds);

@@ -1,0 +1,19 @@
+Starting Fixed-Parameter Random Forest experiment at 12-Feb-2025 21:49:22
+{Unrecognized function or variable 'smote_oversample'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('TopRandomForestAnalysis', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\TopRandomForestAnalysis.m', 70)" style="font-weight:bold">TopRandomForestAnalysis</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\TopRandomForestAnalysis.m',70,0)">line 70</a>)
+        smote_oversample(features_all, binary_labels, patient_ids, batches, k_neighbors);
+} 
+TopRandomForestAnalysis
+[Warning: <a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\TopRandomForestAnalysis.m',118,14)">File: TopRandomForestAnalysis.m Line: 118 Column: 14</a>
+The temporary variable 'windowed_features' will be cleared at the beginning of each iteration of the
+parfor-loop. If 'windowed_features' is used before it is set, a runtime error will occur. For more
+information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB, "Uninitialized Temporaries"</a>.] 
+[Warning: <a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\TopRandomForestAnalysis.m',118,33)">File: TopRandomForestAnalysis.m Line: 118 Column: 33</a>
+The temporary variable 'windowed_labels' will be cleared at the beginning of each iteration of the
+parfor-loop. If 'windowed_labels' is used before it is set, a runtime error will occur. For more
+information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB, "Uninitialized Temporaries"</a>.] 
+[Warning: <a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\TopRandomForestAnalysis.m',118,50)">File: TopRandomForestAnalysis.m Line: 118 Column: 50</a>
+The temporary variable 'windowed_patient_ids' will be cleared at the beginning of each iteration of the
+parfor-loop. If 'windowed_patient_ids' is used before it is set, a runtime error will occur. For more
+information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB, "Uninitialized Temporaries"</a>.] 
