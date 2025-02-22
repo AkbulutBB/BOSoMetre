@@ -177,8 +177,16 @@ if foundFlag
     fprintf('F1 (Clean): %.4f\n', finalResult.F1_Clean);
     fprintf('F1 (Infected): %.4f\n', finalResult.F1_Infected);
     fprintf('Specificity: %.2f%%\n', finalResult.Specificity*100);
+    
+    % Compute and display FP and FN rates based on the confusion matrix.
     fprintf('Confusion Matrix:\n');
     disp(finalResult.ConfusionMatrix);
+    cm = finalResult.ConfusionMatrix;
+    TN = cm(1,1); FP = cm(1,2); FN = cm(2,1); TP = cm(2,2);
+    fp_rate = FP / (TN + FP);
+    fn_rate = FN / (TP + FN);
+    fprintf('False Positive Rate: %.2f%%\n', fp_rate*100);
+    fprintf('False Negative Rate: %.2f%%\n', fn_rate*100);
 else
     fprintf('\nNo configuration meeting the criteria was found after %d seeds and %d experiments.\n', maxSeeds, expCount);
 end
@@ -187,34 +195,46 @@ fclose(fid);  % Close CSV file
 diary off;
 
 %% --- Generate Presentation-Quality Plots ---
-% (Assuming runRFExperiment now returns aggregated ground truth and scores)
+% ROC Curve
 figure;
 [rocX, rocY, rocT, auc] = perfcurve(finalResult.all_test_truth, finalResult.all_test_scores, 1);
 plot(rocX, rocY, 'b-', 'LineWidth', 2);
-xlabel('False Positive Rate');
-ylabel('True Positive Rate');
-title(sprintf('ROC Curve (AUC = %.3f)', auc));
+xlabel('False Positive Rate', 'FontSize', 24);
+ylabel('True Positive Rate', 'FontSize', 24);
+title(sprintf('ROC Curve (AUC = %.3f)', auc), 'FontSize', 24);
 grid on;
+set(gca, 'FontSize', 24);  % Set axes tick labels to font size 24
 
+% Modified Confusion Matrix Plot: Annotate with numerical values.
 figure;
-imagesc(finalResult.ConfusionMatrix);
+cm = finalResult.ConfusionMatrix;
+imagesc(cm);
 colormap('hot');
 colorbar;
-title('Confusion Matrix');
-xlabel('Predicted Class');
-ylabel('True Class');
-set(gca, 'XTick', 1:2, 'XTickLabel', {'Clean','Infected'});
-set(gca, 'YTick', 1:2, 'YTickLabel', {'Clean','Infected'});
+title('Confusion Matrix', 'FontSize', 24);
+xlabel('Predicted Class', 'FontSize', 24);
+ylabel('True Class', 'FontSize', 24);
+set(gca, 'XTick', 1:2, 'XTickLabel', {'Clean','Infected'}, 'FontSize', 24);
+set(gca, 'YTick', 1:2, 'YTickLabel', {'Clean','Infected'}, 'FontSize', 24);
+% Overlay the numbers on each cell with increased font size
+textStrings = num2str(cm(:), '%d'); % Convert numbers to string
+textStrings = strtrim(cellstr(textStrings));  % Remove any space padding
+[x, y] = meshgrid(1:size(cm,2), 1:size(cm,1));
+text(x(:), y(:), textStrings(:), 'HorizontalAlignment', 'center', ...
+    'Color', 'white', 'FontWeight', 'bold', 'FontSize', 24);
 
+% Histogram of Prediction Scores by Class
 figure;
 hold on;
 histogram(finalResult.all_test_scores(finalResult.all_test_truth==0), 'Normalization', 'pdf', 'FaceColor', 'r', 'FaceAlpha', 0.5);
 histogram(finalResult.all_test_scores(finalResult.all_test_truth==1), 'Normalization', 'pdf', 'FaceColor', 'g', 'FaceAlpha', 0.5);
-title('Distribution of Prediction Scores by Class');
-xlabel('Prediction Score');
-ylabel('Probability Density');
-legend('Clean (0)','Infected (1)');
+title('Distribution of Prediction Scores by Class', 'FontSize', 24);
+xlabel('Prediction Score', 'FontSize', 24);
+ylabel('Probability Density', 'FontSize', 24);
+legend('Clean (0)','Infected (1)', 'FontSize', 24);
+set(gca, 'FontSize', 24);  % Set axes tick labels to font size 24
 hold off;
+
 
 %% --- Train Final Model on Entire Dataset and Save It ---
 fprintf('\nTraining final model on the entire windowed dataset...\n');

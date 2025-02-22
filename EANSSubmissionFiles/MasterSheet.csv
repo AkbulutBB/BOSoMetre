@@ -1,0 +1,53 @@
+PatientFileName,InStudyPatientID,Onam,FileTransfer,PatientAllResultsDone,Patient ID,PatientType(1-Inf 2-Bleed 3-PostopBleed 4-AcuteHydrocephalusWithoutInfection),EVDType,DeviceNo,CalibVolts,GuessCalibVolts,RBase,GBase,BBase,CBase,EVD Date,DeviceDate,EndDate,Comments,Name,TCKN,Patient DayOfBirth,Age,Sex,Sürvi (gün),Mortalite,MortaliteDate,ExtDate,Length of Hospital Stay(days),FollowUpDate (bize son girişi olduğu tarih,FollowUpMonths/Survival,Ek hastalık (Varsa- kopyala yapıştır yapabiliriz- ASA skoru asıl önemli olan),PrimarySurgery,PrimarySurgeryDate,PrimarySurgeryIsShunt/CSFRelated(Binary)
+P1-1993076152-D1,1,0,1,1,1993076152,1,HP,1,N/A,2.529512195,66,71,80,207,29/09/2024,30/09/2024,07/10/2024,Belli bir noktada cihazın iki tane pini diskonnekte olmuş- iki kanalı kaydetemedik. 5 Ekime kadar,Mert Yaşar,26609066926,08/03/1992,32,F,#NUM!,0,,10.10.2024	,#VALUE!,,#NUM!,MMC,-,-,1
+P2-2024058757-D3,2,0,1,1,2024058757,1,HP,3,N/A,2.51,62,68,76,195,28/09/2024,30/09/2024,15/10/2024,SD KART FAIL-başlangıç datası var. Tarihleri yanlış. 10/10/2024'ten sonraki kayıtlar yok,HASAN EMİR	DİKMEN,40597475652,06/11/2017,6,M,,0,,16.10.2024 ,,,,,PFTumor,10/09/2024,0
+P3-2023060726-D2,3,0,1,1,2023060726,1,HP,2,N/A,2.530714286,64,71,78,193,02/10/2024,03/10/2024,17/10/2024,Tarih biraz kayık- ama tüm kayıtları aldık,ELA	İNAN,13699889474,03/04/2023,1,F,,0,,18.10.2024,,,,,-,-,1
+P4-2024059359-D4,4,0,1,1,2024059359,1,HP,4,N/A,2.49,59,64,77,194,11/10/2024,12/10/2024,23/10/2024,Arada eksik data var,HAMZA ALİ	YILDIRIM,57688236702,03/07/2024,0,M,,0,,24.10.2024,,,,,-,-,1
+P5-2021069573-D2,5,0,1,1,2021069573,1,HP,2,2.52,2.52,64,71,78,193,23/10/2024,23/10/2024,02/11/2024,All looks fine.,İBRAHİM ASAF CANPOLAT,43639470714,23/01/2021,3,M,,,,,,,,,-,-,1
+P6-2023060726-D1,6,0,1,1,2023060726,1,HP,1,N/A,2.529512195,66,71,80,207,24/10/2024,24/10/2024,-,GB kanalları gitti. Dolayısıyla kayıtlarda sadece iki kanal var. Genel olarak temassızlık problemi gibi. PCB bağlantıları da iyi değil... Bilmiyorum bu aldığım veri seti gerçek mi dolayısıyla... Off of. Sensörü tamamen değiştireceğim.,ELA	İNAN,13699889474,03/04/2023,1,F,,,,,,,,,-,-,1
+P7-2017048479-D2,7,0,1,1,2017048479,1,HP,2,2.52,2.52,64,71,78,193,06/11/2024,07/11/2024,22.11.2024,04/11/2024'te önce batın ucu eksternalize edilmiş. 13/11/2024 EVD kırılmış- arada kayıt boşluğu var. Lehim kontrolleri tekrar yapıldı.,SILA	KANLIOĞLU,11612762668,17/01/2007,17,F,,,,,,,,,Kraniofaringeoma,05/04/2017,0
+P8-2024094100-D4,8,1,1,1,2024094100,1,HP,4,N/A,2.49,66,71,80,207,08/11/2024,09/11/2024,23.11.2024,,MİHRA SARE ATİŞ,46972260264,03/10/2023,1,F,,,,,,,,,-,-,1
+P9-2021055624-D2,9,1,1,1,2021055624,2,HP,2,2.52,2.52,64,71,78,193,23/11/2024,24/11/2024,10/12/2024,08.12.2024 saat 08:00'de EVD kapatıldı- 10.12.2024 12:00'de çekildi,SİBEL AŞIK,52990392368,11/05/1967,57,F,,,,,,,,Bazal ganglion kanaması,-,-,1
+P10-2024038618-D4,10,1,1,1,2024038618,1,HP,4,N/A,2.49,66,71,80,207,29/11/2024,30/11/2024,17/12/2024,17/12/2024 EVD değişimi,AHMET	ÖZKAN,,,,,,,,,,,,,,,
+P11-2024073193-D1,11,1,1,1,2024073193,1,HP,1,N/A,2.529512195,66,71,80,207,30/11/2024,02/12/2024,20/12/2024,Şantın sabahında staph epidermidis var ama bulaş sayılmış- hasta hala başvurmamış..,GÜLCE USLU,,,,,,,,,,,,,,,
+P12-2006086862-D3,12,1,0,0,2006086862,3,ArgiFix,3,2.476666667,2.476666667,92,98,109,289,01/12/2024,02/12/2024,17/12/2024,04/12/2024 ikinci EVD'si takıldı. İlk EVD getirmiyor veriyi kırpmak gerekebilir. Çekilene kadar cihazı tutacağız. 04.12.2024-06.12.2024 arası çalışmadı. 10.12.2024 gündüz 12:00-11.12.2024 08:00 arası kapalı. Cihazın verileri 13'ünde corrupt oldu tekrar sd kart taktık ama hiç kayıt yok.,SELİM YILDIZ,13340302376,,,,,,,,,,,,,,
+P13-2006086862-D6,13,1,0,0,2006086862,3,HP,6,2.4996,2.4996,62,68,76,195,05/12/2024,04/12/2024,17/12/2024,12 nolu hastanın ikinci EVD'si. 2 gün çalıştı- sonra ilk EVD çalışmaya başladı.   10.12.2024 gündüz 12:00-11.12.2024 08:00 arası kapalı,SELİM YILDIZ,,,,,,,,,,,,,,,
+P14-2014112422-D2,14,1,1,1,2014112422,1,ArgiFix,2,2.530714286,2.530714286,98,106,121,309,09/12/2024,10/12/2024,19/12/2024,Enfeksiyon şüpheli. 19/12/2024 EVD tarafı değişti- akuadukt stentini çıkarmak için,MERT DEVRİM,,12.08.2014,,M,,,,,,,,,,,
+P15-2009081542-D3,15,1,1,1,2009081542,1,ArgiFix,3,2.51,2.51,92,98,109,289,15/12/2024,16/12/2024,31/12/2024,27.12.2024 MRG İÇİN ÇIKARILMIŞ HABER EDİLMEMİŞ- 5 GÜNLÜK VERİ YOK. İlk kayıtlar da 20'sinde başlıyor gibi- geç taktım herhalde... Staphylococcus epidermidis üremesi 10'unda alinan kültürde yani şant takılırken ilk ürüyor ancak EVD sonrası yok büyük ihtimalle antibiyotik ilişkili,CIVAN ÇINAR	GÖZMEN,,,,,,,,,,,,,,,
+P16-2024038618-D4,16,1,1,1,2024038618,1,ArgiFix,4,2.49,2.49,76,80,97,254,17/12/2024,18/12/2024,21/12/2024,EVD değişimi ile takıldı- diğer hastanın devamı aslında,AHMET	ÖZKAN,,,,,,,,,,,,,,,
+P17-2014112422-D2,17,1,1,1,2014112422,3,ArgiFix,2,2.530714286,2.530714286,98,106,121,309,19/12/2024,19/12/2024,31/12/2024,EVD tarafı değişti- yeni EVD devamı.,MERT DEVRİM,,,,,,,,,,,,,,,
+P18-2022032143-D2,18,1,1,1,2022032143,3,ArgiFix,2,2.530714286,2.530714286,98,106,121,309,30/12/2024,31/12/2024,04/01/2025,Enfeksiyon çıkmadı. 250104_0745 sonrası voltaj düşüyor- ölçümler de bozuluyor.,TUTKU	ACAR,,,,,,,,,,,,,,,
+P19-2024111089-D4,19,1,1,1,2024111089,2,ArgiFix,4,2.49,2.49,76,80,97,254,04/01/2025,06/01/2024,12/01/2025,Geç haber verildi- geç takıldı. 07/01/2025 EVD kapatıldı akşam. 250112_1030'dan sonra voltaj düşüyor,VURUD	EL BEDEVİ	,,,,,,,,,,,,,,,
+P20-2011058153-D3,20,1,0,0,2011058153,1,ArgiFix,3,2.51,2.51,92,98,109,289,03/01/2025,06/01/2024,,Geç haber verildi- geç takıldı. 31.01.2025'te ayrı bir SD karta kayıt başlandı,ABDULSAMED	ADSIZ,,,,,,,,,,,,,,,
+P21-2019014210-D6,21,1,1,1,2019014210,4,ArgiFix,6,2.5,2.5,75,81,101,252,03/01/2025,06/01/2024,08/01/2025,Geç haber verildi- geç takıldı,DOĞA	TÜRKERİ,,,,,,,,,,,,,,,
+P22-2024075213-D2,22,1,1,1,2024075213,1,ArgiFix,2,2.530714286,2.530714286,98,106,121,309,06/01/2025,07/01/2025,18/01/2025,,GÖKTUĞ DENİZOĞLU,,,,,,,,,,,,,,,
+P23-2024075213-D2,23,1,0,0,2024075213,1,ArgiFix,2,2.530714286,2.530714286,98,106,121,309,17/01/2025,20/01/2025,,Haftasonu değişmiş pazartesi ancak takıldı. Cihaz SD kart hatası verdi. ,GÖKTUĞ DENİZOĞLU,,,,,,,,,,,,,,,
+P24-2023123740-D6,24,,0,0,2023123740,2,ArgiFix,6,2.5,2.5,75,81,101,252,21/01/2025,22/01/2025,,,NURAY	KIZILDEMİR,,,,,,,,,,,,,,,
+P25-2024038618-D4,25,,0,0,2024038618,1,ArgiFix,4,2.49,2.49,76,80,97,254,21/01/2025,22/01/2025,,,AHMET	ÖZKAN,,,,,,,,,,,,,,,
+P26--D,26,,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P27--D,27,,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P28--D,28,,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P29--D,29,,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P30--D,30,,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P31--D,31,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P32--D,32,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P33--D,33,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P34--D,34,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P35--D,35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P36--D,36,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P37--D,37,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P38--D,38,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P39--D,39,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P40--D,40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P41--D,41,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P42--D,42,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P43--D,43,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P44--D,44,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P45--D,45,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P46--D,46,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P47--D,47,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,48,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,49,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,51,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,52,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

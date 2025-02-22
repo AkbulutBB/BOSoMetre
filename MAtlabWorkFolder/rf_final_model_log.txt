@@ -1,0 +1,65 @@
+Starting final model training at 21-Feb-2025 15:21:32
+Using fixed configuration:
+Seed: 1
+NTrees: 50
+MinLeafSize: 1
+ScreeningThreshold: 0.47
+NumPredictors: 4
+MaxNumSplits: 20
+
+Final Dataset: Class 0 = 677, Class 1 = 690
+{Unrecognized function or variable 'create_dynamic_rolling_window_per_patient'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('RandomForestCode', 'G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\RandomForestCode.m', 67)" style="font-weight:bold">RandomForestCode</a> (<a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\RandomForestCode.m',67,0)">line 67</a>)
+[all_windowed_features, all_windowed_labels, ~, ~] = create_dynamic_rolling_window_per_patient(...
+} 
+RandomForestCode
+[Warning: <a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\RandomForestCode.m',141,14)">File: RandomForestCode.m Line: 141 Column: 14</a>
+The temporary variable 'windowed_features' will be cleared at the beginning of each iteration of the
+parfor-loop. If 'windowed_features' is used before it is set, a runtime error will occur. For more
+information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB, "Uninitialized Temporaries"</a>.] 
+[Warning: <a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\RandomForestCode.m',141,33)">File: RandomForestCode.m Line: 141 Column: 33</a>
+The temporary variable 'windowed_labels' will be cleared at the beginning of each iteration of the
+parfor-loop. If 'windowed_labels' is used before it is set, a runtime error will occur. For more
+information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB, "Uninitialized Temporaries"</a>.] 
+[Warning: <a href="matlab: opentoline('G:\My Drive\Neuropapers\Githubstuff\BOSoMetre\MAtlabWorkFolder\RandomForestCode.m',141,50)">File: RandomForestCode.m Line: 141 Column: 50</a>
+The temporary variable 'windowed_patient_ids' will be cleared at the beginning of each iteration of the
+parfor-loop. If 'windowed_patient_ids' is used before it is set, a runtime error will occur. For more
+information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB, "Uninitialized Temporaries"</a>.] 
+Starting final model training at 21-Feb-2025 15:22:06
+Using fixed configuration:
+Seed: 1
+NTrees: 50
+MinLeafSize: 1
+ScreeningThreshold: 0.47
+NumPredictors: 4
+MaxNumSplits: 20
+
+Final Dataset: Class 0 = 677, Class 1 = 690
+
+Training final model on the entire windowed dataset using fixed parameters...
+Final model saved as finalRFModel.mat
+Starting final model training at 21-Feb-2025 15:23:32
+Using fixed configuration:
+Seed: 1
+NTrees: 50
+MinLeafSize: 1
+ScreeningThreshold: 0.47
+NumPredictors: 4
+MaxNumSplits: 20
+
+Final Dataset: Class 0 = 677, Class 1 = 690
+
+Training final model on the entire windowed dataset using fixed parameters...
+
+Final Model Performance (Training Set):
+Accuracy: 92.02%
+Sensitivity: 84.88%
+Specificity: 98.04%
+F1 Score (Clean): 0.9302
+F1 Score (Infected): 0.9068
+Confusion Matrix:
+   400     8
+    52   292
+
+Final model saved as finalRFModel.mat
