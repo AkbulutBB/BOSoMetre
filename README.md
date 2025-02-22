@@ -5,6 +5,8 @@ Doctorate thesis for B. Bahadır Akbulut.
 
 Project Title: Cerebrospinal Fluid Monitoring with TCS3200 Sensor and SD Card Logging
 
+Final files for analysis and code can be found in the FinalSubmissionFiles folder.
+
 Project Overview:
 
 This Arduino project aims to measure both the color and turbidity (clarity) of cerebro samples using a TCS3200 color sensor. The sensor data is logged onto an SD card for later analysis, making it suitable for potential early infection infection infection detection systems.
